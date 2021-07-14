@@ -1,0 +1,15 @@
+var Base_WeaponsList = {
+	"card throw" : {
+		regExpSearch : /^(?=.*card)(?=.*throw).*$/i,
+		name : "Card Throw",
+		source : ["HB"],
+		list : "spell",		
+		ability : "6",
+		type : "Cantrip",
+		damage : [C, 8, ""],
+		range : "60 ft",
+		description : "Make a ranged attack, roll d6 for dmg - 1: 1d8 fire, 2: 1d8 acid, 3: 1d8 lightning, 4: 1d8 poison, 5: 1d8 cold, 6: 1d8 force.",
+		abilitytodamage : false
+	},
+}
+var AllSpellsArray, AllSpellsObject, AddSpellsMenu, AllCasterClasses, spDias;
