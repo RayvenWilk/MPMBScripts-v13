@@ -1,3 +1,19 @@
+/*	-WHAT IS THIS?-
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
+	-KEEP IN MIND-
+	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
+*/
+
+/*  -INFORMATION-
+	Subject:    Add to Base Weapons List
+	Effect:     
+	Content:	
+	Code by:	rayvenwilk
+	Date:		2021-07-14 (sheet v13)
+*/
+
+var iFileName = "Weaponlist.js";
 var Base_WeaponsList = {
 	"card throw" : {
 		regExpSearch : /^(?=.*card)(?=.*throw).*$/i,
