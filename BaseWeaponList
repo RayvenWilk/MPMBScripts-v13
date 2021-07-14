@@ -28,4 +28,3 @@ var Base_WeaponsList = {
 		abilitytodamage : false
 	},
 }
-var AllSpellsArray, AllSpellsObject, AddSpellsMenu, AllCasterClasses, spDias;
