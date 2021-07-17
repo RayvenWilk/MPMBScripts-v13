@@ -1,0 +1,25 @@
+
+var iFileName = "Homebrew - MagicItems.js";
+RequiredSheetVersion("13.0.6");
+
+
+MagicItemsList["the dagger of many daggers"] = {
+	name : "The Dagger of Many Daggers",
+	nameTest : /^(?=.*dagger)(?=.*many)(?=.*daggers).*$/i,
+	source : ["HB", 0],
+	defaultExcluded : false,
+	type : "weapon (dagger)",
+	rarity : "very rare",
+	attunement : true,
+	description : "The Dagger of Many Daggers is a +2 magical dagger, acts normal when used as a melee weapon. The Temporal Loop kicks in when the dagger is thrown. The item has one charge, and when thrown as part of a ranged attack, you may expend one of the charges. Dagger flys as normal but begins to multiply. You gain 2d4 extra ranged attaks against the chosen target. Item regains it's charge an hour after use.",
+	descriptionLong : "The Dagger of Many Daggers is a +2 magical dagger, acts normal when used as a melee weapon. The Temporal Loop kicks in when the dagger is thrown. The item has one charge, and when thrown as part of a ranged attack, you may expend one of the charges. Dagger flys as normal but begins to multiply. You gain 2d4 extra ranged attaks against the chosen target. Item regains it's charge an hour after use.",
+		weaponsAdd : ["The Dagger of Many Daggers"],
+		weaponOptions : {
+			baseWeapon : "dagger",
+			regExpSearch : /^(?=.*dagger)(?=.*many)(?=.*daggers).*$/i,
+			name : "The Dagger of Many Daggers",
+			source : ["HB"],
+			description : "This dagger adds +2 to hit, 5 charges. 1 charge = 2d4 duplicate daggers.",
+			modifiers : [2, 2]
+		}	
+};
