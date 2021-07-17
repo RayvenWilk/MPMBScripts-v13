@@ -19,7 +19,7 @@ MagicItemsList["the dagger of many daggers"] = {
 			regExpSearch : /^(?=.*dagger)(?=.*many)(?=.*daggers).*$/i,
 			name : "The Dagger of Many Daggers",
 			source : ["HB"],
-			description : "This dagger adds +2 to hit, 5 charges. 1 charge = 2d4 duplicate daggers.",
+			description : "This dagger adds +2 to hit, 1 charges. 1 charge = 2d4 extra daggers.",
 			modifiers : [2, 2]
 		}	
 };
