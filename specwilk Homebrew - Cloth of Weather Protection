@@ -1,0 +1,18 @@
+var iFileName = "specwilk Homebrew - Cloth of Weather Protection.js";
+RequiredSheetVersion("13.0");
+
+MagicItemsList["cloth of weather protection"] = {
+	name : "Cloth of Weather Protection",
+	source : ["HB", 0],
+	type : "wondrous item",
+	rarity : "uncommon",
+	description : "This dark blue square of cloth contains 4 command words, resist cold - half cold dmg, resist heat - half fire dmg, resist wet - no disadvantage or penalties, longful rest - double rest.",
+	descriptionFull : "This 4in x 4in dark blue square of cloth contains 4 command words , one in each corner of the cloth and has the following functions:"+
+	"\n \u2022 1. Resist Cold - Upon the command the cloth will transform into a thick winter coat and will reduce half of any magical cold damage."+
+	"\n \u2022 2. Resist Heat - Upon the command, the cloth will transform into a lightweight jacket that has small fans woven into the inner lining, keeping the wearer from suffering negatives from extreme heat and will reduce magical heat damage by half."+
+	"\n \u2022 3. Resist Wet - Upon command, the cloth will transform into a coat that acts as a shield between the wearer and wet weather - rain, snow, etc. Any penalties normally taken for action in severe wet weather are negated while wearing this coat."+
+	"\n \u2022 4. Longful Rest - Upon command the cloth will transform into a blanket that will surround the owner creating a bed like surface protecting the possessor and allowing for an uninterrupted rest. Additionally this function enhances the sleep so that 1 hour of sleep is equal to 2 hours for all spell related rest periods."+
+	"\n \u2022 Each function can be used for a period of 8 total hours and they can be used independent of each other. Once a function is used, that function will need a long rest to recharge, If all charges are used up the cloth will rteun to its original form until each affect recharges - equal to 4 long rests.",
+	usages : "4",
+	recovery : "long rest"
+};
