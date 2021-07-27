@@ -1,0 +1,65 @@
+var iFileName = "Homebrew - Trick&Treat by bonusaction.js";
+RequiredSheetVersion("13.0");
+
+
+MagicItemsList["trick"] = {
+	name : "Trick",
+	source : ["HB", 0],
+	defaultExcluded : false,
+	type : "weapon (dagger)",
+	rarity : "rare",
+	attunement : true,
+  	usages : "2",
+  	recovery : "long rest",
+  	action : ["reaction", "Reaction of Deception"],
+	description : "This +2 dagger, 2x per long rest, you can use your reaction to swap places with another creature within 30ft of you that you can see when you are being attacked. Wis DC 15 save. If you are also attuned to Treat, the DC increases by 3 and you may attempt to swap places 3x per long rest.",
+	descriptionLong : "This +2 dagger, 2x per long rest, you can use your reaction to swap places with another creature within 30ft of you that you can see when you are being attacked. Wis DC 15 save. If you are also attuned to Treat, the DC increases by 3 and you may attempt to swap places 3x per long rest.",
+		weaponsAdd : ["Trick"],
+		weaponOptions : {
+			baseWeapon : "dagger",
+			name : "Trick",
+			source : ["HB"],
+      			regExpSearch : /^(?=.*trick).*$/i,
+     			type : "Martial",
+      			ability : 2,
+      			abilitytodamage : true,
+      			damage : [1, 4, "piercing"],
+      			range : "Melee, 30/90 ft",
+			description : "Finesse, light",
+      			list : "melee",
+      			isMagicWeapon : true,
+      			isAlwaysProf : true,
+			modifiers : [2, 2]
+		}
+},
+
+MagicItemsList["treat"] = {
+	name : "Treat",
+	source : ["HB", 0],
+	defaultExcluded : false,
+	type : "weapon (dagger)",
+	rarity : "rare",
+	attunement : true,
+	usages : "1",
+	recovery : "long rest",
+	action : ["reaction", "A Small Gift"],
+	description : "This +2 dagger with a crit hit you regain hp equal to half the damage. Once per day, when a creature within 30ft takes dmg you can lower it by 2d4+2. If you are also attuned to Trick, you may lower the dmg by an extra 1d4 and use this feature 2x per long rest.",
+	descriptionLong : "This +2 dagger with a crit hit you regain hp equal to half the damage. Once per day, when a creature within 30ft takes dmg you can lower it by 2d4+2. If you are also attuned to Trick, you may lower the dmg by an extra 1d4 and use this feature 2x per long rest.",
+		weaponsAdd : ["Treat"],
+		weaponOptions : {
+			baseWeapon : "dagger",
+			name : "Treat",
+			source : ["HB"],
+      			regExpSearch : /^(?=.*treat).*$/i,
+      			type : "Martial",
+      			ability : 2,
+      			abilitytodamage : true,
+      			damage : [1, 4, "piercing"],
+      			range : "Melee, 30/90 ft",
+			description : "Finesse, light",
+      			list : "melee",
+     			isMagicWeapon : true,
+      			isAlwaysProf : true,
+			modifiers : [2, 2]
+		}	
+};
