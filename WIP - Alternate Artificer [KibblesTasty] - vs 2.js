@@ -9,6 +9,9 @@
 /*  -INFORMATION-
     Subject:    Class
     Effect:     This script adds a class called the "Artificer" and its 7 subclasses.
+    
+    	This is KibblesTasty's Alternate Artificer vs 1.1 script that I hope to update to vs 2.2 along with updating the sheet version from 12 to 13.
+	Any help with this would be greatly appreciated. 
 
 */
 
