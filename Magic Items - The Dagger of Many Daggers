@@ -1,6 +1,6 @@
 
 var iFileName = "Homebrew - MagicItems.js";
-RequiredSheetVersion("13.0.5");
+RequiredSheetVersion("13");
 
 
 MagicItemsList["the dagger of many daggers"] = {
