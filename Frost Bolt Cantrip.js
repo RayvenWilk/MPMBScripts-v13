@@ -1,3 +1,22 @@
+
+/*	-WHAT IS THIS?-
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
+	-KEEP IN MIND-
+	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
+*/
+
+/*  -INFORMATION-
+	Subject:    Frost Bolt Cantrip by DNDBlue
+	Effect:     
+	Content:	Weapon cantrips found : https://www.gmbinder.com/share/-Mj4aQyEZcvqnhmpZ9SI?fbclid=IwAR3CGUZP_JFWGpFuzbvuC1PmFOFMPYZHEwa_Escl-EGbrsnHl9WFqI66O7E
+                
+	Code by:	rayvenwilk
+	Date:		2021-09-12 (sheet 13.0.4)
+*/
+
+var iFileName = "FrostBoltCantrip_byDNDBlue(coded_by_rayvenwilk).js";
+
 SpellsList["frost bolt"] = {
 	name : "Frost Bolt",
 	nameShort : "Frost Bolt",
