@@ -24,7 +24,7 @@ SpellsList["decastave"] = {
 	level : 2,
 	school : "Conj",
 	time : "1 a",
-	range : "0 ft",
+	range : "Touch",
     rangeMetric : "0 km",
 	components : "V,S,M",
     compMaterial : "A slender wand of duskwood",
