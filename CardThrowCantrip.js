@@ -28,6 +28,7 @@ SpellsList : [{
 	school : "Conj",
 	time : "1 a",
 	range : "60 ft",
+	rangeMetric : "18 m",
 	components : "V,S",
 	duration : "Instantaneous",
 	firstCol : "atwill",
