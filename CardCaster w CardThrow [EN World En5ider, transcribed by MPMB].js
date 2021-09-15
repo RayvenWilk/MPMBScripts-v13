@@ -18,7 +18,7 @@
 
 				Please support the creators of this content on their Patreon: https://www.patreon.com/ensider
 
-	Code by:	MorePurpleMoreBetter
+	Code by:	MorePurpleMoreBetter - rayvenwilk (added Card Throw Cantrip)
 	Date:		2018-08-13 (sheet v13.0.0beta4)
 
 	As no multiclassing rules are given in the source, the ones here are an interpretation by MPMB.
