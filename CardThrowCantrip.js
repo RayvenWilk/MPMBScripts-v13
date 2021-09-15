@@ -10,10 +10,10 @@
 	Effect:     
 	Content:	
 	Code by:	rayvenwilk
-	Date:		2021-07-12 (sheet v13)
+	Date:		2021-07-12 (sheet v13.0.4)
 */
 
-var iFileName = "Homebrew Syntax - CardThrowCantrip(Cardcaster).js";
+var iFileName = "CardThrowCantrip(Cardcaster).js";
 
 // Spells start
 SpellsList["card throw"] = {
@@ -42,7 +42,8 @@ SpellsList["card throw"] = {
 		"4 = 1d8 poison damage",
 		"5 = 1d8 cold damage",
 		"6 = 1d8 force damage", 
-		"At higher levels: Cards thrown increase by 1 at 5th, 11th, and 17th."]),
+		"At higher levels: Cards thrown increase by 1 at 5th, 11th, and 17th."
+	]),
 },
 WeaponsList["card throw"] = {
 	regExpSearch : /^(?=.*card)(?=.*throw).*$/i,
