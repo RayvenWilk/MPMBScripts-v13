@@ -28,6 +28,7 @@ SpellsList["frost bolt"] = {
 	school : "Conj",
 	time : "1 a",
 	range : "self",
+	rangeMetric : "self",
 	components : "S, M*",
 	compMaterial : "a ranged weapon that has the ammo property & is worth at least 1sp",
 	duration : "1 round",
