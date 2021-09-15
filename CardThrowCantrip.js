@@ -16,7 +16,7 @@
 var iFileName = "Homebrew Syntax - CardThrowCantrip(Cardcaster).js";
 
 // Spells start
-SpellsList : [{
+SpellsList["card throw"] = {
 	name : "Card Throw",
 	nameShort : "Card Throw",
 	nameAlt : "Card Throw",
