@@ -41,7 +41,7 @@ SpellsList["card throw"] = {
 		"4 = 1d8 poison damage",
 		"5 = 1d8 cold damage",
 		"6 = 1d8 force damage", 
-		"At higher levels: Cards thrown increase by 1 at 5th, 11th, and 17th.",
+		"At higher levels: Cards thrown increase by 1 at 5th, 11th, and 17th."
 	]),
 },
 WeaponsList["card throw"] = {
@@ -55,5 +55,4 @@ WeaponsList["card throw"] = {
 	range : "60 ft",
 	list : "spell",
 	description : "roll d6 for dmg - 1: 1d8 fire, 2: 1d8 acid, 3: 1d8 lightning, 4: 1d8 poison, 5: 1d8 cold, 6: 1d8 force.",
-	},
-];
+}
