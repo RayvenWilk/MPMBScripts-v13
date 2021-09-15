@@ -10,7 +10,7 @@
 	Effect:     
 	Content:	
 	Code by:	rayvenwilk
-	Date:		2021-09-11 (sheet v13)
+	Date:		2021-09-11 (sheet v13.0.4)
 */
 
 var iFileName = "Far East - Forgotten Realms - Decastave Spell.js";
