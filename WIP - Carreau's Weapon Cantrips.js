@@ -271,7 +271,7 @@ SpellsList["electrified net"] = {
 	components : "S,M",
 	compMaterial : "a net worth at least 1 sp",
 	duration : "Until the target is freed from the net used in the spell's casting",
-	description : "on hit net dmg + target takes 2d8 lightning each time tries to get free - +1d8 lightning dmg @ 5th, 11th, & 17th lvl",
+	description : "on hit net dmg + target takes 2d8 Lightning dmg each time tries to get free - +1d8 Lightning dmg @ 5th, 11th, & 17th lvl",
 	descriptionFull : desc([
 		"You brandish the net used in the spell’s casting and make an attack with it against a creature. On a hit, the target suffers the attack’s normal effects, and every time it makes an ability check or an attack roll to free himself from the net, it takes 2d8 lightning damage.",
 		"At Higher Levels. At 5th level, the lightning damage increases to 3d8. That damage roll increases by 1d8 at 11th level (4d8) and 17th level (5d8).",
@@ -288,7 +288,7 @@ SpellsList["dark net"] = {
 	components : "S,M",
 	compMaterial : "a net worth at least 1 sp",
 	duration : "Until the target is freed from the net used in the spell's casting",
-	description : "",
+	description : "on hit net dmg + 1st hit each round SC mod Necrotic dmg + 1d6 Necrotic dmg @ 5th, 11th, & 17th lvl",
 	descriptionFull : desc([
 		"You brandish the net used in the spell’s casting and make an attack with it against a creature. On a hit, the target suffers the attack’s normal effects, and the first time it is hit by an attack each round, it takes an extra necrotic damage equal to your spellcasting modifier as shadowy tentacles sprout from the net and leach the life away from its body.",
 		"At Higher Levels. At 5th level, the necrotic damage increases to 1d6 + your spellcasting modifier. That damage roll increases by 1d6 at 11th level (2d6) and 17th level (3d6).",
@@ -305,7 +305,7 @@ SpellsList["burning trap"] = {
 	components: "S,M",
 	compMaterial : "a hunting trap or bag of caltrops worth at least 1 sp",
 	duration : "8 hr",
-	description : "",
+	description : "once triggered, trap/caltrop dmg + 1d4 Fire dmg at the start of each turn until free/healed + 1d4 Fire dmg @ 5th, 11th, & 17th lvl",
 	descriptionFull : desc([
 		"You brandish the hunting trap or a bag of caltrops used in the spell’s casting and set it on the ground within 5 feet of you. The next creature that triggers the trap or walks on the caltrops suffers the normal effects of them, and then takes 1d4 fire damage on the start of each of its turns. The spell ends when the creature is freed from your hunting trap or is healed from the caltrops wounds.",
 		"At Higher Levels. At 5th level, the fire damage increases to 2d4. That damage roll also increases by 1d4 at 11th level (3d4) and 17th level (4d4).",
@@ -323,7 +323,7 @@ SpellsList["explosive trap"] = {
 	components: "S,M",
 	compMaterial : "a hunting trap or bag of caltrops worth at least 1 sp",
 	duration : "8 hr",
-	description : "",
+	description : "once triggered, trap/caltrop dmg + 1d8 Thunder dmg + crea w/in 5ft rad take 1d8 Thunder dmg + 1d8 Thunder dmg @ 5th, 11th, & 17th lvl",
 	descriptionFull : desc([
 		"You brandish the hunting trap or a bag of caltrops used in the spell’s casting and set it on the ground within 5 feet of you. The next creature that triggers the trap or walks on the caltrops suffers the normal effects of them, and takes an extra 1d8 thunder damage. Each other creature within 5 feet of the trap when it is triggered also takes 1d8 thunder damage. The spell then ends.",
 		"At Higher Levels. At 5th level, the thunder damage increases to 2d8. That damage roll also increases by 1d8 at 11th level (3d8) and 17th level (4d8).",
