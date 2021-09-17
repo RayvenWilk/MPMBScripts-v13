@@ -19,11 +19,8 @@ var iFileName = "CarreausWeaponCantrips_byLeRoiDeCarreau(coded_by_rayvenwilk).js
 // Spells start
 SpellsList["frosted arrow"] = {
 	name : "Frosted Arrow",
-	nameShort : "Frosted Arrow",
-	nameAlt : "Frosted Arrow",
 	classes : ["artificer", "bard", "druid", "sorcerer", "warlock", "wizard"],
 	source : ["HB"],
-	ritual : false,
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
@@ -79,7 +76,6 @@ SpellsList["ravenous throw"] = {
 	school : "Necro",
 	time : "1 a",
 	range : "self",
-	rangeMetric : "self",
 	components : "S,M",
 	compMaterial : "a melee weapon worth at least 1 sp with the Thrown property",
 	duration : "1 rnd",
@@ -93,7 +89,6 @@ SpellsList["acid pike"] = {
 	name : "Acid Pike",
 	classes : ["artificer", "sorcerer", "warlock", "wizard"],
 	source : ["HB"],
-	ritual : false,
 	level : 0,
 	school : "Evoc",
 	time : "1 a",
