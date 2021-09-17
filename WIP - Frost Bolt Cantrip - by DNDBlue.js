@@ -28,10 +28,10 @@ SpellsList["frost bolt"] = {
 	components : "S,M*",
 	compMaterial : "a ranged weapon that has the ammo property & is worth at least 1sp",
 	duration : "1 round",
-	description : "create an icicle piece of ammo, on hit target takes weapon dmg and speed is reduced by 10ft. +1d6 cold dmg @ 5th, 11th, & 17th lvl",
-	descriptionCantripDie :
+	description : "create an icicle piece of ammo, on hit target takes weapon dmg & speed is reduced by 10ft. +1d6 Cold dmg @ 5th, 11th, & 17th lvl",
+	descriptionCantripDie : "create an icicle piece of ammo, on hit target takes weapon dmg & speed is reduced by 10ft +`CD-1`d6 Cold dmg",
 	descriptionFull : desc([
 		"You conjure and icicle, which is loaded and shot from the weapon used in this spell's casting. Make a ranged weapon attack against one creature within the weapon's normal range. On a hit, the target suffers the weapon attack's normal effects and then becomes wreathed in frost. The target's speed is reduced by 10ft until hte start of your next turn.",
-		"At 5th level, the ranged weapon attack deals an extra 1d6 cold damage to the target on a hit. This damage increases by 1d6 when you reach 11th level (2d4), and 17th level (3d4).",
+		"At 5th level, the ranged weapon attack deals an extra 1d6 cold damage to the target on a hit. This damage increases by 1d6 when you reach 11th level (2d6), and 17th level (3d6).",
 	]),
 }
