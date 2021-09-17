@@ -24,10 +24,10 @@ SpellsList["frost bolt"] = {
 	level : 0,
 	school : "Conj",
 	time : "1 a",
-	range : "self",
+	range : "Self",
 	components : "S,M*",
 	compMaterial : "a ranged weapon that has the ammo property & is worth at least 1sp",
-	duration : "1 round",
+	duration : "1 rnd",
 	description : "conjure 1 icicle ammo, on hit target takes wea dmg & speed is reduced 10ft. +1d6 Cold dmg @ 5th, 11th, & 17th lvl",
 	descriptionCantripDie : "conjure 1 icicle ammo, on hit target takes wea dmg & speed is reduced 10ft +`CD-1`d6 Cold dmg",
 	descriptionFull : desc([
