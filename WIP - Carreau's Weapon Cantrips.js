@@ -31,7 +31,7 @@ SpellsList["frosted arrow"] = {
 	components : "S,M",
 	compMaterial : "a ranged weapon worth at least 1sp",
 	duration : "1 rnd",
-	description : "ranged atk, wea dmg + speed reduced 10ft. + `CD`d8 cold dmg @ lvl 5th, 11th, & 17th",
+	description : "ranged atk, wea dmg + speed reduced 10ft. + 1d8 Cold dmg @ lvl 5th, 11th, & 17th",
 	descriptionFull : desc([
 		"You brandish the weapon used in the spell’s casting and make a ranged attack with it against a creature. On a hit, the target suffers the weapon attack’s normal effects, and its movement speed is reduced by 10ft. for the duration of the spell.",
 		"At Higher Levels. At 5th level, the ranged attack deals an extra 1d8 cold damage to the target on a hit. That damage roll increases by 1d8 at 11th level (2d8) and 17th level (3d8).",
@@ -48,7 +48,7 @@ SpellsList["shining arrow"] = {
 	components : "S,M",
 	compMaterial : "a ranged weapon worth at least 1sp",
 	duration : "Instantaneous",
-	description : "ranged atk, wea dmg + can hit crea in line of target w/in 15ft for SC mod rad dmg. + `CD`d8 radiant dmg @ lvl 5th, 11th, & 17th ",
+	description : "ranged atk, wea dmg + can hit crea in line of target w/in 15ft for SC mod Radiant dmg. + 1d8 Radiant dmg @ lvl 5th, 11th, & 17th ",
 	descriptionFull : desc([
         	"You brandish the weapon used in the spell’s casting and make a ranged attack with it against a creature. On a hit, the target suffers the weapon attack’s normal effects, and you can cause the light to pierce through the creature and hit a second creature on a same line and within 15 feet of the first one. The second creature takes radiant damage equal to your spellcasting ability modifier.",
         	"At Higher Levels. At 5th level, the ranged attack deals an extra 1d8 radiant damage to the target on a hit, and the radiant damage to the second creature increases to 1d8 + your spellcasting ability modifier. Both damage rolls increase by 1d8 at 11th level (2d8 and 2d8) and 17th level (3d8 and 3d8).",
@@ -65,7 +65,7 @@ SpellsList["lightning throw"] = {
 	components : "S,M",
 	compMaterial : "a melee weapon worth at least 1 sp with the Thrown property",
 	duration : "Instantaneous",
-	description : "ranged atk, wea dmg, wea returns, sc mod lightning dmg to crea w/in 10ft of me - + `CD`d8 lightning dmg @ lvl 5th, 11th, & 17th",
+	description : "ranged atk, wea dmg, wea returns, sc mod lightning dmg to crea w/in 10ft of me - + 1d8 Lightning dmg @ lvl 5th, 11th, & 17th",
 	descriptionFull : desc([ 
 		"You brandish the weapon used in the spell’s casting and make a ranged attack with it against a creature. On a hit, the target suffers the weapon attack’s normal effects, and the weapon returns to your hand, crackling with lightnings, and you can cause the lightnings to leap to an other creature within 10 feet of you. The second creature takes lightning damage equal to your spellcasting ability modifier.",
 		"At Higher Levels. At 5th level, the ranged attack deals an extra 1d8 lightning damage to the target on a hit, and the lightning damage to the second creature increases to 1d8 + your spellcasting ability modifier. Both damage rolls increase by 1d8 at 11th level (2d8 and 2d8) and 17th level (3d8 and 3d8).",
@@ -83,7 +83,7 @@ SpellsList["ravenous throw"] = {
 	components : "S,M",
 	compMaterial : "a melee weapon worth at least 1 sp with the Thrown property",
 	duration : "1 rnd",
-	description : "ranged atk w/in 10ft, wea dmg + next melee hit to same crea - `CD`d6 Necrotic dmg. + `CD`d6 necrotic dmg both @ lvl 5th, 11th, & 17th",
+	description : "ranged atk w/in 10ft, wea dmg + next melee hit to same crea - 1d6 Necrotic dmg. + 1d6 Necrotic dmg both @ lvl 5th, 11th, & 17th",
 	descriptionFull : desc([
 		"You brandish the weapon used in the spell’s casting and make a ranged attack with it against a creature that is at least 10 feet from you. On a hit, the target suffers the weapon attack’s normal effects, and a dark energy gnaws the creature's defenses. The next time the creature is hit by a melee weapon attack, it takes extra 1d6 necrotic damage.",
 		"At Higher Levels. At 5th level, the ranged attack deals an extra 1d6 necrotic damage to the target on a hit, and the necrotic damage from the melee weapon attack increases to 2d6. Both damage rolls increase by 1d6 at 11th level (2d6 & 3d6) and 17th level (3d6 & 4d6).",
@@ -101,7 +101,7 @@ SpellsList["acid pike"] = {
 	components : "S,M",
 	compMaterial : "a melee weapon worth at least 1 sp with the reach property",
 	duration : "1 rnd",
-	description : "melee atk, on hit, wea dmg + 5ft dia of acid on ground, end turn in area 1d8 acid dmg. + 1d8 acid dmg both @ lvl 5th, 11th, & 17th",
+	description : "melee atk, on hit, wea dmg + 5ft dia of acid on ground, end turn in area 1d8 Acid dmg. + 1d8 Acid dmg both @ lvl 5th, 11th, & 17th",
 	descriptionFull : desc([
 		"You brandish the weapon used in the spell’s casting and make a melee attack with it. On a hit, the target suffers the weapon attack’s normal effects, and acid splashes from your weapon and creates a pool of 5 feet diameter on the ground beneath the creature's feet. The pool of acid lasts for the spell's duration, and any creature that end its turn in that pool takes 1d8 acid damage.",
 		"At Higher Levels. At 5th level, the melee attack deals an extra 1d8 acid damage to the target on a hit, and the damage a target takes from ending its turn in the acid pool increases to 2d8. Both damage rolls increase by 1d8 at 11th level (2d8 & 3d8) and again at 17th level (3d8 & 4d8).",
@@ -118,7 +118,7 @@ SpellsList["tormeting pike"] = {
 	components : "S,M",
 	compMaterial : "a melee weapon worth at least 1 sp with the reach property",
 	duration : "1 rnd",
-	description : "melee atk, wea dmg + SC mod psychic dmg 1st time crea atk not you. 5th lvl add SC mod to dmg. + 1d8 psychic dmg both @ lvl 5th, 11th, & 17th",
+	description : "melee atk, wea dmg + SC mod psychic dmg 1st time crea atk not you. 5th lvl add SC mod to dmg. + 1d8 Psychic dmg both @ lvl 5th, 11th, & 17th",
 	descriptionFull : desc([
 		"You brandish the weapon used in the spell’s casting and make a melee attack with it. On a hit, the target suffers the weapon attack’s normal effects, and the first time it attacks a creature other than you before the spell ends, it takes psychic damage equal to your spellcasting ability modifier.",
 		"At Higher Levels. At 5th level, the melee attack deals an extra 1d8 psychic damage to the target on a hit, and the damage the target takes if it attacks a creature other than you increases to 1d8 + your spellcasting modifier. Both damage rolls increase by 1d8 at 11th level (2d8 & 2d8) and again at 17th level (3d8 & 3d8).",
