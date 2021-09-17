@@ -706,11 +706,8 @@ AddSubClass("cardcaster", "jack of beasts", {
 
 SpellsList["card throw"] = {
 	name : "Card Throw",
-	nameShort : "Card Throw",
-	nameAlt : "Card Throw",
 	classes : ["cardcaster"],
 	source : ["HB"],
-	ritual : false,
 	level : 0,
 	school : "Conj",
 	time : "1 a",
@@ -720,7 +717,6 @@ SpellsList["card throw"] = {
 	duration : "Instantaneous",
 	firstCol : "atwill",
 	description : "range atk, roll d6 for dmg - 1: 1d8 fire, 2: 1d8 acid, 3: 1d8 lightning, 4: 1d8 poison, 5: 1d8 cold, 6: 1d8 force",
-	descriptionMetric : "range atk, roll d6 for dmg - 1: 1d8 fire, 2: 1d8 acid, 3: 1d8 lightning, 4: 1d8 poison, 5: 1d8 cold, 6: 1d8 force",
 	descriptionFull : desc([
 		"Make a ranged attack, on a successful hit roll a d6 for dmg",
 		"1 = 1d8 fire damage",
