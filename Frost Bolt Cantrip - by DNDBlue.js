@@ -19,20 +19,15 @@ var iFileName = "FrostBoltCantrip_byDNDBlue(coded_by_rayvenwilk).js";
 
 SpellsList["frost bolt"] = {
 	name : "Frost Bolt",
-	nameShort : "Frost Bolt",
-	nameAlt : "Frost Bolt",
 	classes : ["artificer", "druid", "sorcerer", "warlock", "wizard"],
 	source : ["HB"],
-	ritual : false,
 	level : 0,
 	school : "Conj",
 	time : "1 a",
 	range : "self",
-	rangeMetric : "self",
 	components : "S, M*",
 	compMaterial : "a ranged weapon that has the ammo property & is worth at least 1sp",
 	duration : "1 round",
-	firstCol : "atwill",
 	description : "create an icicle piece of ammo, on hit target takes weapon dmg and speed is reduced by 10ft. +1d6 cold dmg @ 5th, 11th, & 17th lvl",
 	descriptionMetric : "create an icicle piece of ammo, on hit target takes weapon dmg and speed is reduced by 10ft. +1d6 cold dmg @ 5th, 11th, & 17th lvl",
 	descriptionFull : desc([
