@@ -14,7 +14,7 @@
 	Date:		2021-09-18 (sheet v13.0.6)
 */
 
-var iFileName = "Vairant Fairy Race (transcribed by rayvenwilk).js";
+var iFileName = "Variant Fairy Race (transcribed by rayvenwilk).js";
 RequiredSheetVersion("13.0.6");
 
 RaceList["mind fairy"] = {
