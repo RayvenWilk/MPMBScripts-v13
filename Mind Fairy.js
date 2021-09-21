@@ -8,7 +8,7 @@
 
 /*	-INFORMATION-
 	Subject:	Race
-	Effect:		This script adds 1 subrace to the fairy race
+	Effect:		This script adds 1 subrace to the fairy race (I will be adding more)
 				This is taken from the dandwiki website (https://www.dandwiki.com/wiki/Fairy,_Variant_(5e_Race)_)
 	Code by:	rayvenwilk
 	Date:		2021-09-18 (sheet v13.0.6)
@@ -31,7 +31,7 @@ RaceList["mind fairy"] = {
 	languageProfs : ["Common", "Sylvan", "Deep Speech"],
 	dmgres : ["Psychic"],
 	savetxt : {
-		text : ["Advantage on saving throws against being charmed", "Magic can't put me to sleep"],
+		text : ["Adv. on being charmed", "Magic can't put me to sleep"],
 		adv_vs : ["charmed", "stunned"],
 	},
 	skills : ["Nature"],
