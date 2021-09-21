@@ -31,7 +31,7 @@ RaceList["mind fairy"] = {
 	languageProfs : ["Common", "Sylvan", "Deep Speech"],
 	dmgres : ["Psychic"],
 	savetxt : {
-		text : ["Adv. on being charmed", "Magic can't put me to sleep"],
+		text : ["Magic can't put me to sleep"],
 		adv_vs : ["charmed", "stunned"],
 	},
 	skills : ["Nature"],
