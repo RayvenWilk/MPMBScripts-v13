@@ -11,11 +11,11 @@
 	Effect:		This script adds 1 subrace to the fairy race (I will be adding more)
 				This is taken from the dandwiki website (https://www.dandwiki.com/wiki/Fairy,_Variant_(5e_Race)_)
 	Code by:	rayvenwilk
-	Date:		2021-09-18 (sheet v13.0.6)
+	Date:		2021-09-18 (sheet v13.0.5)
 */
 
 var iFileName = "Variant Fairy Race (transcribed by rayvenwilk).js";
-RequiredSheetVersion("13.0.6");
+RequiredSheetVersion("13.0.5");
 
 RaceList["mind fairy"] = {
     regExpSearch :  /^(((?=.*\b(mind|psychic)\b)(?=.*\b(fairy)\b))).*$/i,
