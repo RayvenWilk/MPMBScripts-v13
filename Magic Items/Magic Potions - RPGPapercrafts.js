@@ -1,13 +1,13 @@
 /*	-INFORMATION-
 	Subject:	Magical Potions
-	Effect:		Add common potions to the equipment list and magic item list
+	Effect:		Add potions to the equipment list and magic item list
 	Remarks:	This is to add the potions created by RPGPapercrafts & Raafling (https://www.drivethrurpg.com/product/241053/Magic-Potions--Ingredients)
 	Coded by :	rayvenwilk
-	Date :		09.22.2021
+	Date :		09.23.2021
 	Sheet:		v13.0.5
 */
 
-var iFileName = "MagicalPotions by RPGPapercrafts(transcribed by rayvenwilk.js";
+var iFileName = "Magical Potions by RPGPapercrafts(transcribed by rayvenwilk.js";
 
 RequiredSheetVersion("13.0.5");
 
@@ -230,7 +230,7 @@ MagicItemsList["fey dew"] = {
 	name : "Fey Dew",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "rare",
 	weight : 0.25,
 	description : "Instant 4d4 +8 health. What does it taste like? Pretty much like a fairy tickling your tongue.",
 	descriptionFull : "Instant 4d4 +8 health. \nWhat does it taste like? Pretty much like a fairy tickling your tongue.",
@@ -248,7 +248,7 @@ MagicItemsList["assassin's tear"] = {
 	name : "Assassin's Tear",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "uncommon",
 	weight : 0.25,
 	description : "Instant, consumer much succeed on a DC 14 Con saving throw or take 2d6 +4 poison dmg and become poisoned. \nConsumer detects poison with a Nature check or passive nature skill of 14",
 	descriptionFull : "Instant, consumer much succeed on a DC 14 Con saving throw or take 2d6 +4 poison dmg and become poisoned. \nConsumer detects poison with a Nature check or passive nature skill of 14",
@@ -257,7 +257,7 @@ MagicItemsList["moonbrine"] = {
 	name : "Moonbrine",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "uncommon",
 	weight : 0.25,
 	description : "Instant 2d4 +4 health. \nStore in a dark place away from moonlight unless you want to explode.",
 	descriptionFull : "Instant 2d4 +4 health. \nStore in a dark place away from moonlight unless you want to explode.",
@@ -266,7 +266,7 @@ MagicItemsList["witherbroth"] = {
 	name : "Witherbroth",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "rare",
 	weight : 0.25,
 	description : "Instant, consumer must succeed on a DC 20 Con saving throw or take 4d6 +8 poison dmg and become poisoned. \nConsumer detects poison with a Nature check or passive nature skill of 18.",
 	descriptionFull : "Instant, consumer must succeed on a DC 20 Con saving throw or take 4d6 +8 poison dmg and become poisoned. \nConsumer detects poison with a Nature check or passive nature skill of 18.",
@@ -284,7 +284,7 @@ MagicItemsList["mountain brew"] = {
 	name : "Mountain Brew",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "uncommon",
 	weight : 0.25,
 	description : "Instant, Strength +2 (1hr), aftwards the consumer must succeed on a DC 12 Con saving throw or take 2 lvls of exhaustion. \nDispite the name, you can't actually lift mountains. But you sure can move boulders.",
 	descriptionFull : "Instant, Strength +2 (1hr), aftwards the consumer must succeed on a DC 12 Con saving throw or take 2 lvls of exhaustion. \nDispite the name, you can't actually lift mountains. But you sure can move boulders.",
@@ -293,7 +293,7 @@ MagicItemsList["thunderjuice"] = {
 	name : "Thunderjuice",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "rare",
 	weight : 0.25,
 	description : "Instant, Strength +3 (1hr), afterwards the consumer must succeed on a DC 14 Con saving throw or take 3 lvls of exhaustion. \nWould you drink a holy brew blessed by some unknown deity? Know what you consume, stay safe.",
 	descriptionFull : "Instant, Strength +3 (1hr), afterwards the consumer must succeed on a DC 14 Con saving throw or take 3 lvls of exhaustion. \nWould you drink a holy brew blessed by some unknown deity? Know what you consume, stay safe.",
@@ -329,7 +329,7 @@ MagicItemsList["quickling milk"] = {
 	name : "Quickling Milk",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "uncommon",
 	weight : 0.25,
 	description : "Instant, Dexterity +2 (1hr), afterwards the consumer must succeed on a DC 10 Con saving throw or take 2 lvls of exhaustion. \nNo Quicklings have been milked. It's called this because Quicklings commonly drink it.",
 	descriptionFull : "Instant, Dexterity +2 (1hr), afterwards the consumer must succeed on a DC 10 Con saving throw or take 2 lvls of exhaustion. \nNo Quicklings have been milked. It's called this because Quicklings commonly drink it.",
@@ -338,7 +338,7 @@ MagicItemsList["liquid lightning"] = {
 	name : "Liquid Lightning",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "rare",
 	weight : 0.25,
 	description : "Instant, Dexterity +3 (1hr), afterwards the consumer must succeed on a DC 10 Con saving throw or take 3 lvls of exhaustion. \nDespite the name, you can't outrun lightning. Sorry.",
 	descriptionFull : "Instant, Dexterity +3 (1hr), afterwards the consumer must succeed on a DC 10 Con saving throw or take 3 lvls of exhaustion. \nDespite the name, you can't outrun lightning. Sorry.",
@@ -347,7 +347,7 @@ MagicItemsList["spirit swig"] = {
 	name : "Spirit Swig",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "rare",
 	weight : 0.25,
 	description : "Instant, ethereal vision for 1hr. \nBeware: what has been seen can not be unseen.",
 	descriptionFull : "Instant, ethereal vision for 1hr. \nBeware: what has been seen can not be unseen.",
@@ -410,7 +410,7 @@ MagicItemsList["phoenix blood"] = {
 	name : "Phoenix Blood",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "uncommon",
 	weight : 0.25,
 	description : "Instant, fire resistance (1hr). \nHumanoids may experience their skin turning red, horns growing from their heads and/or growing a tail when perpetually overconsumed.",
 	descriptionFull : "Instant, fire resistance (1hr). \nHumanoids may experience their skin turning red, horns growing from their heads and/or growing a tail when perpetually overconsumed.",
@@ -437,7 +437,7 @@ MagicItemsList["bait broth"] = {
 	name : "Bait Broth",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "uncommon",
 	weight : 0.25,
 	description : "Instant, gives off an irresistable scent in a 60ft area that attracts a specific beast or monstrosity (chosen at time of brewing). The affected creatures much succeed on a DC 12 Cha saving throw or be charmed and you gain Animal Handling +4 against this creature (1hr). \nBe careful how you use this. We discovered that elephants are very into cuddling and we can not recommend the experience.",
 	descriptionFull : "Instant, gives off an irresistable scent in a 60ft area that attracts a specific beast or monstrosity (chosen at time of brewing). The affected creatures much succeed on a DC 12 Cha saving throw or be charmed and you gain Animal Handling +4 against this creature (1hr). \nBe careful how you use this. We discovered that elephants are very into cuddling and we can not recommend the experience.",
@@ -446,7 +446,7 @@ MagicItemsList["stench broth"] = {
 	name : "Stench Broth",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "uncommon",
 	weight : 0.25,
 	description : "Instant, gives off a terrible scent in a 60ft area that repels a specific beast or monstrosity (chosen at time of brewing). The affected creatures much succeed on a DC 12 Cha saving throw or be frightened (1hr). \nPlease use far away from civilization. Also please don't scare wild animals towards civilization.",
 	descriptionFull : "Instant, gives off a terrible scent in a 60ft area that repels a specific beast or monstrosity (chosen at time of brewing). The affected creatures much succeed on a DC 12 Cha saving throw or be frightened (1hr). \nPlease use far away from civilization. Also please don't scare wild animals towards civilization.",
@@ -455,7 +455,7 @@ MagicItemsList["chauntea's blessing"] = {
 	name : "Chauntea's Blessing",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "rare",
 	weight : 0.25,
 	description : "4hrs after consumption, consumer receives the effects of a Remove Curse spell. \nThis recipe is impossibly simple. Spellcasters just can't accept it works.",
 	descriptionFull : "4hrs after consumption, consumer receives the effects of a Remove Curse spell. \nThis recipe is impossibly simple. Spellcasters just can't accept it works.",
@@ -464,7 +464,7 @@ MagicItemsList["chauntea's grace"] = {
 	name : "Chauntea's Grace",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "rare",
 	weight : 0.25,
 	description : "Instant, consumer receives the effects of a Revivify spell as long as they have been dead no longer than 1 min, restores 1 HP. \nBe sure the creature has been dead less than a minute or an evil spirit may enter first.",
 	descriptionFull : "Instant, consumer receives the effects of a Revivify spell as long as they have been dead no longer than 1 min, restores 1 HP. \nBe sure the creature has been dead less than a minute or an evil spirit may enter first.",
@@ -473,7 +473,7 @@ MagicItemsList["silvershot"] = {
 	name : "Silvershot",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "uncommon",
 	weight : 0.25,
 	description : "Instant, consumer receives the effects of a short rest and can spend their hit die but suffers 1 lvl of exhaustion every hour until a long rest. \nDrink 2 to get a long rest effect! Also get 1 permanent madness and 1 exhaustion level per minute.",
 	descriptionFull : "Instant, consumer receives the effects of a short rest and can spend their hit die but suffers 1 lvl of exhaustion every hour until a long rest. \nDrink 2 to get a long rest effect! Also get 1 permanent madness and 1 exhaustion level per minute.",
@@ -482,7 +482,7 @@ MagicItemsList["astral nightcap"] = {
 	name : "Astral Nightcap",
 	source : ["HB"],
 	type : "potion",
-	rarity : "common",
+	rarity : "uncommon",
 	weight : 0.25,
 	description : "Instant, consumer immediately falls asleep for 8hrs and can not be awakened. \nBe sure to have someone trustworty to watch over you.",
 	descriptionFull : "Instant, consumer immediately falls asleep for 8hrs and can not be awakened. \nBe sure to have someone trustworty to watch over you.",
