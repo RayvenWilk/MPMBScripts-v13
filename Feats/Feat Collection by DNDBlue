@@ -1,0 +1,302 @@
+/*	-INFORMATION-
+	Subject:	DNDBlue's Feat Collection 1 & 2
+	Effect:		Add homebrew feats
+	Remarks:	This is to add some of the feats created by DNDBlue
+                    (https://www.gmbinder.com/share/-Mijpe3akfjGU4MmVlmw?fbclid=IwAR24u-559hA8mMjD4mPAC-EMIs59XDDDh_XCkZWFZ4Hb4l4EPp4FWHB-r7g)
+	Coded by :	rayvenwilk
+	Date :		09.23.2021
+	Sheet:		v13.0.5
+*/
+
+var iFileName = "Feat Collection by DNDBlue(transcribed by rayvenwilk.js";
+
+RequiredSheetVersion("13.0.5");
+
+FeatsList["academic"] = {
+    name : "Academic",
+    source : ["HB"],
+    allowDuplicates : true,
+    improvements: "Academic (feat): +1 Intelligence;",
+    scores : [0, 0, 0, 1, 0, 0],
+    description : "Increase your Int score by 1. You have dedicated yourself to a particular field of study. If you are already proficient with your chosen skill you gain expertise instead. You can roll a d6 and add the number rolled to any ability check you make with your chosen skill.",
+    descriptionFull : "You have dedicated yourself to a particular field of study: \nIncrease your Intelligence score by 1, to a maximum of 20. \nYou gain proficiency with one of the following skills; Arcana, History, Nature, or Religion. If you are already proficient with your chosen skill you gain expertise instead. \nYou can roll a d6 and add the number rolled to any ability check you make with your chosen skill. \nYou can select this feat multiple times. Each time you do so, you must choose a different skill.",
+    choices : ['Arcana', 'History', 'Nature', 'Religion'],
+    "arcana" : {
+        name : "Arcana",
+        description : "Increase your Int score by 1. You have dedicated yourself to a Arcana. If you are already proficient with Arcana you gain expertise instead. You can roll a d6 and add the number rolled to any Arcana ability check you make.",
+        skills : [
+            "Arcana",
+            ["Arcana", "increment"]
+        ],
+    },
+    "history" : {
+        name : "History",
+        description : "Increase your Int score by 1. You have dedicated yourself to a History. If you are already proficient with History you gain expertise instead. You can roll a d6 and add the number rolled to any History ability check you make.",
+        skills : [
+            "History",
+            ["History", "increment"]
+        ],
+    },
+    "nature" : {
+        name : "Nature",
+        description : "Increase your Int score by 1. You have dedicated yourself to a Nature. If you are already proficient with Nature you gain expertise instead. You can roll a d6 and add the number rolled to any Nature ability check you make.",
+        skills : [
+            "Nature",
+            ["Nature", "increment"]
+        ],
+    },
+    "religion" : {
+        name : "Religion",
+        description : "Increase your Int score by 1. You have dedicated yourself to a Religion. If you are already proficient with Religion you gain expertise instead. You can roll a d6 and add the number rolled to any Religion ability check you make.",
+        skills : [
+            "Religion",
+            ["Religion", "increment"]
+        ],
+    }
+},
+FeatsList["banditry"] = {
+    name : "Banditry",
+    source : ["HB"],
+    improvements : "Banditry (feat): +1 Strength or Dexterity",
+    description : "Increase your Str or Dex score by 1. You gain proficiency with one martial weapon of your choice. Your sneak attack is now compatible with any melee weapon, so long as that weapon lacks the heavy property.",
+    descriptionFull : "Your ability to exploit your opponent’s weaknesses isn’t restricted to light and ranged weaponry: \nIncrease your Strength or Dexterity score by 1, to a maximum of 20. \nYou gain proficiency with one martial weapon of your choice. \nYour sneak attack is now compatible with any melee weapon, so long as that weapon lacks the heavy property.",
+    prerequisite : "Sneak Attack feature",   
+},
+FeatsList["barbaric charge"] = {
+    name : "Barbaric Charge",
+    source : ["HB"],
+    improvements : "Barbaric Charge (feat): +1 Strength, Dexterity, or Constitution",
+    description : "Increase your Str, Dex, or Con score by 1. While raging, your speed increases by 10 ft. When you use your bonus action to enter a rage, you also take the Dash action as part of that same bonus action.",
+    descriptionFull : "The fury of your rage allows you to move at greater speeds. You gain the following benefits: \nIncrease your Strength, Dexterity, or Constitution score by 1, to a maximum of 20. \nWhile raging, your speed increases by 10 feet. \nWhen you use your bonus action to enter a rage, you also take the Dash action as part of that same bonus action.",
+    prerequisite : "Rage feature"
+},
+FeatsList["bard initiate"] = {
+    name : "Bard Initiate",
+    source : ["HB"],
+    action : [
+        ["bonus action", "Bard Initiate"],
+    ],
+    usages : "Proficiency Bonus per",
+    recovery : "long rest",
+    //usagescalc : "event.value = Math.max(1, What('Wis Mod'));" - not sure how to set this up for Proficiency Bonus
+    description : "As a bonus action, target one creature (not yourself) w/in 60ft of you, creature gains a d6 Bardic die. Creature must be able to hear you & have no Bardic die. Once w/in the next 10 minutes, roll the die & add the number rolled to one ability check, attack roll, or saving throw before knowing the outcome of the roll. You can use this feature a number of times equal to your Prof Bonus. You regain all expended uses when you finish a long rest.",
+    descriptionFull : "You learn how to inspire others through your rousing words. \nAs a bonus action, target one creature (other than yourself) within 60ft of you, that creature gains a d6 Bardic Inspiration die. Creatures that cannot hear you cannot be inspired and a creature can have only one Bardic Inspiration die at a time. \nOnce within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. They must choose to roll your inspiration die before knowing the outcome of the roll. \nYou can use this feature a number of times equal to your Proficiency Bonus. You regain all expended uses when you finish a long rest.",
+},
+FeatsList["battle mage"] = {
+    name : "Battle Mage",
+    source : ["HB"],
+    improvements : "Battle Mage (feat): +1 your choice",
+    description : "Increase one ability score of your choice by 1. You gain proficiency with one simple or martial weapon of your choice. During a short rest, you can touch one weapon that you are proficient with and begin to perform a 1-hour ritual so the weapon can be used as a spellcasting focus.",
+    descriptionFull : "You’ve refined your spellcasting and martial abilities. You gain the following benefits: \nIncrease one ability score of your choice by 1, to a maximum of 20. \nYou gain proficiency with one simple or martial weapon of your choice. \nYou can touch one weapon that you are proficient with and begin to perform a 1-hour ritual. This ritual can be performed during a short rest. When the ritual is complete, the weapon can be used as a spellcasting focus.",
+},
+FeatsList["courageous"] = {
+    name : "Courageous",
+    source : ["HB"],
+    improvements : "Courageous (feat): +1 your choice",
+    savetxt : {
+		text : "Movement is not affected when frightened",
+		adv_vs : "frightened",
+	},
+    description : "Increase one ability score of your choice by 1. You have advantage on saving throws made to resist the Frightened condition. Your movement is no longer affected by the Frightened condition.",
+    descriptionFull : "You are able to overcome your fear, granting you the following benefits: \nIncrease one ability score of your choice by 1, to a maximum of 20. \nYou have advantage on saving throws made to resist the Frightened condition. \nYour movement is no longer affected by the Frightened condition.",
+},
+FeatsList["chameleon"] = {
+    name : "Chameleon",
+    source : "HB",
+    prerequisite : "Lizardfolk",
+    description : "So long as you aren’t wearing armour, you can become Invisible as an action. Any equipment you are wearing or carrying becomes invisible with you. The Invisibility ends if you; move, take any action, don armour, concentrate on a spell or become incapacitated.",
+    descriptionFull : "You are capable of changing the colour and transparency of your scales to better blend in with your surroundings. So long as you aren’t wearing armour, you can become Invisible as an action. Any equipment you are wearing or carrying becomes invisible with you. The Invisibility ends if you; move, take any action, don armour, concentrate on a spell or become incapacitated.",
+},
+FeatsList["disenchanting"] = {
+    name : "Disenchanting",
+    source : ["HB"],
+    prerequisite : "Countercharm feature",
+    improvements : "Disenchanting (feat): +1 Charisma",
+    scores : [0, 0, 0, 0, 0, 1],
+    description : "Increase your Cha score by 1. Countercharm can now be activated as a bonus action. Any friendly creatures under the effects of Countercharm can add your Cha mod to any saving throws to resist being charmed or frightened.",
+    descriptionFull : "Your ability to disrupted mind altering effects has improved. You gain the following benefits: \nIncrease your Charisma score by 1, to a maximum of 20. \nCountercharm can now be activated as a bonus action, instead of an action. \nAny friendly creatures under the effects of Countercharm can add your Charisma modifier to any saving throws they make to resist being charmed or frightened.",
+},
+FeatsList["deep sea chaperon"] = {
+    name : "Deep Sea Chaperon",
+    source : ["HB"],
+    prerequisite : "Triton",
+    improvements : "Deep Sea Chaperon (feat): +1 Strength, Constitution or Charisma",
+    spellcastingBonus : [{
+        spells : ["Water Breathing"],
+        name : "Deep Sea Chaperon",
+        firstCol : "oncelr",
+        recovery : "long rest",
+    }],
+    description : "Increase your Str, Con or Cha score by 1. You can cast Water Breathing without expending a spell slot, targets of the spell gain a swimming speed equal to their walking speed for the duration. You must finish a long rest before you can cast it again.",
+    descriptionFull : "Your ability to control the power of the sea has improved, granting you the following benefits: \nIncrease your Strength, Constitution or Charisma score by 1, to a maximum of 20. \nYou can cast Water Breathing without expending a spell slot. When you cast Water Breathing using this feat, targets of the spell gain a swimming speed equal to their walking speed for the duration. Once you cast Water Breathing in this way, you must finish a long rest before you can do so again.",
+},
+//FeatsList["druid Initiate"] - I will get back to this one
+    //name : "Druid Initiate",
+    //source : ["HB"],
+    //description : "You learn two cantrip of your choice from the Druid spell list, wis is your spellcasting ability for these spells. Once per long rest, you can use your action to magically assume the shape of a beast that you have seen before. It must have a CR of 0 & lack a swimming or flying speed. It lasts 10min & can be ended early as a bonus action.",
+    //descriptionFull : "Nature has made a call and you have answered. You learn two cantrip of your choice from the Druid spell list, wisdom is your spellcasting ability for these spells. \nAdditionally, you can use your action to magically assume the shape of a beast that you have seen before. The beast must have a CR of 0 and lack a swimming or flying speed. The transformation lasts 10-minutes and can be ended early as a bonus action. This feat uses the same rules as Wildshape, see page 66 of the Player’s Handbook for more details. \nYou can use this feature once, regaining its use after finishing a long rest.",
+FeatsList["elusive"] = {
+    name : "Elusive",
+    source : ["HB"],
+    prerequisite : "Dexterity 13 or higher",
+    //prereqeval : function(v) { - didn't work correctly
+        //return v.What('Dex') >= 13;
+    //},
+    improvements : "Elusive (feat): +1 Dexterity",
+    scores : [0, 1, 0, 0, 0, 0],
+    description : "Increase your Dex score by 1. You & up to ten companions w/in 60ft of you can travel at a normal pace while stealthing. If you choose to travel at a slow pace, you & your companions gain a +5 bonus to their stealth rolls.Creatures have disadvantage on any Wis(Perception) & Wis(Survival) checks they make to track you or your companions.",
+    descriptionFull : "You have a knack for avoiding the consequences of your actions: \nIncrease your Dexterity score by 1, to a maximum of 20. \nYou and up to ten companions within 60 feet of you can travel at a normal pace while stealthing. If you choose to travel at a slow pace, you and your companions gain a +5 bonus to their stealth rolls. (See page 181 of the Player’s Handbook for rules on travel pace.) \nCreatures have disadvantage on any Wisdom (Perception) & Wisdom (Survival) checks they make in an attempt to track you or your companions.",
+}
+FeatsList["familiar friend"] = {
+    name : "Familiar Friend",
+    source : ["HB"],
+    spellcastingBonus : [{
+        spells : ["find familiar"],
+        name : "Familiar Friend",
+        firstCol : "oncelr",
+        recovery : "long rest",
+    }],
+    description : "You learn the Find Familiar spell, which you can cast without expending a spell slot, once per long rest. When choosing your familiar’s form, you can choose any CR 0 beast. While you are touching your familiar, you can change its form as an action.",
+    descriptionFull : "You have bonded with an animal spirit, granting you the following benefits: \nYou learn the Find Familiar spell, which can cast without expending a spell slot. You must finish a long rest before you can cast it in this way again. \nWhen choosing your familiar’s form, you can choose any CR 0 beast. \nWhile you are touching your familiar, you can change its form as an action.",
+},
+FeatsList["feather foot"] = {
+    name : "Feather Foot",
+    source : ["HB"],
+    prerequisite : "Dexterity 13 or higher",
+    prereqeval : function(v) {
+        return v.What('Dex') >= 13;
+    },
+    improvements : "Feather Foot (feat): +1 Dexterity",
+    scores : [0, 1, 0, 0, 0, 0],
+    description : "Increase your Dex score by 1. You can use Dex, instead of Str, to determine how far and high you can jump. Your footsteps no longer trigger non-magical, pressurebased traps (include; pitfalls, hunting traps, pressure plates, and trip wires).",
+    descriptionFull : "You move with a soft, delicate step. You gain the following benefits: \nIncrease your Dexterity score by 1, to a maximum of 20. \nYou can use Dexterity, instead of Strength, to determine how far and high you can jump. \nYour footsteps no longer trigger non-magical, pressurebased traps. Examples of such traps include; pitfalls, hunting traps, pressure plates, and trip wires.",
+},
+FeatsList["friend of the forest"] = {
+    name : "Friend of the Forest",
+    source : ["HB"],
+    description : "You are a friend to creatures big and small. You gain the ability to understand and speak with beasts. The beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day.",
+    descriptionFull : "You are a friend to creatures big and small. You gain the ability to understand and speak with beasts. \nThe knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day.",
+},
+//FeatsList["foreign magic"] = { - I will get back to this one
+    //name : "Foreign Magic",
+    //source : ["HB"],
+    //description : "Choose a class: bard, cleric, druid, sorcerer, warlock, or wizard. You learn two 1st-level spells from your chosen class’s spell list, each once per long rest. You can use either Int, Wis, or Cha as the spellcasting ability for these spells. You can also cast these spells using a spell slot.",
+    //descriptionFull : "Choose a class: bard, cleric, druid, sorcerer, warlock, or wizard. You begin to study the magical talents of your chosen class: \nYou learn two 1st-level spells from your chosen class’s spell list. You can use either Intelligence, Wisdom, or Charisma as the spellcasting ability for these spells. \nYou can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can’t cast that spell in this way again until you finish a long rest. You can also cast these spells using a spell slot.",
+//FeatsList["fountain of sourcery"] = { - I will get back to this one
+    //name : "Fountain of Sorcery",
+    //source : ["HB"],
+    //prerequisite : "Metamagic feature",
+    //description : "",
+    //descriptionFull : "You unlock a hidden source of sorcery within yourself. You gain the following benefits: \nYou learn an additional Metamagic option. \nYou gain additional sorcery points equal to your half your Sorcerer level (rounded down). These additional sorcery points can only be spent on Metamagic and cannot be converted into spell slots. You regain all spent sorcery points when you finish a long rest.",
+//Greater spells feats - I will add later
+FeatsList["hand of devotion"] = {
+    name : "Hand of Devotion",
+    source : ["HB"],
+    improvements : "Hands of Devotion (feat): +1 Strength or Charisma",
+    prerequisite : "Divine Smite feature",
+    description : "Increase your Str or Cha score by 1. Your body is considered a holy symbol and can be used as a spellcasting focus for your Paladin spells. Your Divine Smite feature is now compatible with unarmed strikes. This extends to your Improved Divine Smite feature at 11th level.",
+    descriptionFull : "Your body is a vessel for your divine power: \nIncrease your Strength or Charisma score by 1, to a maximum of 20. \nYour body is considered a holy symbol and can be used as a spellcasting focus for your Paladin spells. \nYour Divine Smite feature is now compatible with unarmed strikes. This extends to your Improved Divine Smite feature at 11th level.",
+},
+FeatsList["honed strength"] = {
+    name : "Honed Strength",
+    source : ["HB"],
+    prerequisite : "Unarmored Defense feature",
+    description : "You’ve honed your strength and refined your technique. You can use Strength, instead of Dexterity, for Initiative rolls and Unarmored Defense.",
+    descriptionFull : "You’ve honed your strength and refined your technique. \nYou can use Strength, instead of Dexterity, for Initiative rolls and Unarmored Defense.",
+},
+FeatsList["hound"] = {
+    name : "Hound",
+    source : ["HB"],
+    improvements : "Hound (feat): +1 Wisdom",
+    scores : [0, 0, 0, 0, 1, 0],
+    savetxt : {
+		adv_vs : ["wisdom(perception)"],
+	},
+    description : "Increase your Wis score by 1. You have adv on Wis (Perception) checks that rely on smell. You can smell an object that has been worn or used by a creature w/in the last 10 days to gain a +5 bonus to Wis (Perception) & Wis (Survival) checks made to track that creature, until you finish a long rest.",
+    descriptionFull : "You have a nose like a dog. You gain the following benefits: \nIncrease your Wisdom score by 1, to a maximum of 20. \nYou have advantage on Wisdom (Perception) checks that rely on smell. \nYou can smell an object that has been worn or used by a creature within the last 10 days to gain a +5 bonus to Wisdom (Perception) and Wisdom (Survival) checks made to track that creature. This effect lasts until you finish a long rest.",
+},
+FeatsList["infusionist"] = {
+    name : "Infusionist",
+    source : ["HB"],
+    prerequisite : "Infuse Item feature",
+    description : "You learn an additional infusion of your choice from the Artificer Infusions list. Standard restrictions for learning an infusion still apply. The maximum number of Infused items you can create increases by 1.",
+    descriptionFull : "Your ingenuity and inventiveness have improved, granting you the following benefits: \nYou learn an additional infusion of your choice from the Artificer Infusions list. Standard restrictions for learning an infusion still apply. \nThe maximum number of Infused items you can create increases by 1.",
+},
+FeatsList["insomniac"] = {
+    name : "Insomniac",
+    source : ["HB"],
+    improvements : "Insomniac (feat): +1 your choice",
+    description : "Increase one ability score of your choice by 1. You only need 4 hours of sleep to gain the benefits of a long rest. You no longer have disadv on ability checks when you have only a single level of exhaustion.",
+    descriptionFull : "Your many late nights have taught you how to function with less sleep. You gain the following benefits: \nIncrease one ability score of your choice by 1, to a maximum of 20. \nYou only need 4 hours of sleep to gain the benefits of a long rest. \nYou no longer have disadvantage on ability checks when you have only a single level of exhaustion.",
+},
+FeatsList["mariner"] = {
+    name : "Mariner",
+    source : ["HB"],
+    toodProfs : [
+        "Navigator's tools",
+        ["Navigator's tools", "Dex"],
+    ],
+    description : "You gain proficiency with Vehicles (water) and Navigator’s Tools. You gain a swimming speed equal to your walking speed. You can spend 1-minute studying the sky to determine what the weather will be for the next 24 hours.",
+    descriptionFull : "You have learned how to sail the seas, granting you the following benefits: \nYou gain proficiency with Vehicles (water) and Navigator’s Tools. \nYou gain a swimming speed equal to your walking speed. \nYou can spend 1-minute studying the sky to determine what the weather will be for the next 24 hours.",
+},
+FeatsList["monk initiate"] = {
+    name : "Monk Initiate",
+    source : ["HB"],
+    description : "You can use Dex instead of Str for the attack and damage rolls of your unarmed strikes. Your unarmed strikes gain a d4 dmg. When you use the Attack action with an unarmed strike, you can make 1 unarmed strike as a bonus action.",
+    descriptionFull : "You’ve learned the basics of unarmed martial arts: \nYou can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes. \nYour unarmed strikes gain a d4 damage die. \nWhen you use the Attack action with an unarmed strike, you can make one unarmed strike as a bonus action.",
+},
+FeatsList["mountaineer"] = {
+    name : "Mountaineer",
+    source : ["HB"],
+    description : "You gain a climbing speed equal to your walking speed. You can reduce any falling damage you take by an amount equal to your character level. You gain adv on any Str (Athletics) checks you make in relation to climbing.",
+    descriptionFull : "No peak is beyond your reach. You gain the following benefits: \nYou gain a climbing speed equal to your walking speed. \nYou can reduce any falling damage you take by an amount equal to your character level. \nYou gain advantage on any Strength (Athletics) checks you make in relation to climbing."
+},
+FeatsList["mystic"] = {
+    name : "Mystic",
+    source : ["HB"],
+    prerequisite : "Ki feature",
+    improvements : "Mystic (feat): +1 Dexterity or Wisdom",
+    description : "Increase your Dex or Wis score by 1. You gain additional Ki equal to your Prof Bonus, regained by completing a long or short rest.",
+    descriptionFull : "You’ve learned how to better harness the power of Ki. You gain the following benefits: \nIncrease your Dexterity or Wisdom score by 1, to a maximum of 20. \nYou gain additional Ki equal to your Proficiency Bonus. This additional Ki is regained by completing a long or short rest.",
+},
+FeatsList["paladin initiate"] = {
+    name : "Paladin Initiate",
+    source : ["HB"],
+    description : "You gain a pool of d8’s equal to your Prof Bonus. When you hit a creature with a melee weapon attack, you can spend one or more of these d8 to deal extra radiant dmg. The max # of d8’s you can spend on a single attack is equal to 1/2 your prof bonus (round down). You regain all expended dice after a long rest.",
+    descriptionFull : "You learn how to empower your strikes with divine magic. \nYou gain a pool of d8’s equal to your Proficiency Bonus. When you hit a creature with a melee weapon attack, you can spend one or more of these d8 to deal extra radiant damage to the target, in addition to the weapon’s damage. Roll the dice you spend; the target takes additional radiant damage equal to the amount rolled. \nThe maximum number of d8’s you can spend on a single attack is equal to half your proficiency bonus (rounded down). You regain all expended dice when you finish a long rest.",
+},
+FeatsList["pushover"] = {
+    name : "Pushover",
+    source : ["HB"],
+    prerequisite : "Strength 13 or higher",
+    improvements : "Pushover (feat): +1 Strength",
+    scores : [1, 0, 0, 0, 0, 0],
+    description : "Increase your Str score by 1. You have adv on Str (Athletics) checks made to Shove a Creature. When you successfully shove a creature & decide to push them, the distance they are pushed is now equal to your str score, rounded down to the nearest 5ft.",
+    descriptionFull : "You learn how to effectively use your strength to overpower your enemies. You gain the following benefits: \nIncrease your Strength score by 1, to a maximum of 20. \nYou have advantage on Strength (Athletics) checks made to Shove a Creature. \nWhen you successfully shove a creature and decide to push them, the distance they are pushed is now equal to your strength score, rounded down to the nearest 5ft.",
+},
+FeatsList["recall arcana"] = {
+    name : "Recall Arcana",
+    source : ["HB"],
+    prerequisite : "Wizard 1st level or higher",
+    description : "You can cast an unprepared spell of 5th level or lower from your spellbook, treating the spell as if it were prepared. You can use this feat a number of times equal to 1/2 your Prof Bonus (rounded down), regaining all expended uses after a long rest.",
+    descriptionFull : "You can more easily recall and recite the incantation for spells you haven’t prepared. You can cast an unprepared spell of 5th level or lower from your spellbook, treating the spell as if it were prepared. \nYou can use this feat a number of times equal to half your Proficiency Bonus (rounded down), regaining all expended uses when you finish a long rest.",
+},
+FeatsList["resolute"] = {
+    name : "Resolute",
+    source : ["HB"],
+    improvements : "Resolute (feat): +1 Strength, Dexterity, or Constitution",
+    description : "Increase your Str, Dex or Con score by 1. When you use your Indomitable feature on a saving throw you aren’t proficient with, you can add your Proficiency Bonus to the rerolled saving throw.",
+    descriptionFull : "Your strength and will is unyielding. You gain the following benefits: \nIncrease your Strength, Dexterity or Constitution score by 1, to a maximum of 20. \nWhen you use your Indomitable feature on a saving throw you aren’t proficient with, you can add your Proficiency Bonus to the rerolled saving throw.",
+},
+FeatsList["seismic touch"] = {
+    name : "Seismic Touch",
+    source : ["HB"],
+    description : "You learn how to sense the subtle vibrations that travel through the ground. As an action, you can touch a solid surface and gain 60ft Tremorsense until the start of your next turn. Tremorsense can't be used to detect flying or incorporeal creatures.",
+    descriptionFull : "You learn how to sense the subtle vibrations that travel through the ground. As an action, you can touch a solid surface and gain 60ft Tremorsense until the start of your next turn. \nA creature with Tremorsense can detect and pinpoint the origin of vibrations within a specific radius, provided that creature and the source of the vibrations are in contact with the same ground or substance. Tremorsense can't be used to detect flying or incorporeal creatures.",
+},
+FeatsList["tactician"] = {
+    name : "Tactician",
+    source : ["HB"],
+    description : "You are always ready for battle & always have a battle plan. After you roll initiative but before the first turn of combat, you can swap your initiative position with a willing creature. You can only use this feat once per combat encounter.",
+    descriptionFull : "You are always ready for battle and always have a battle plan. After you roll initiative but before the first turn of combat, you can swap your initiative position with a willing creature. You can only use this feat once per combat encounter.",
+}
