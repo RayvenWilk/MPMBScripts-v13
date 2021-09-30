@@ -173,7 +173,7 @@ SpellsList["ice strike"] = {
 	compMaterial : "a one handed melee weapon worth at least 1 sp",
 	duration : "1 rnd",
 	description : "ice covers wea, on hit wea dmg + reduce speed by 10ft. + 1d8 Cold dmg @ lvl 5th, 11th, & 17th",
-	descriptionCantripDie : "ice covers wea, on hit wea dmg + 'CD-1'd8 Cold dmg & speed reduced 10ft",
+	descriptionCantripDie : "ice covers wea, on hit wea dmg + `CD-1`d8 Cold dmg & speed reduced 10ft",
 	descriptionFull : desc([
 		"You brandish the weapon used in the spell’s casting and make an attack with it against a creature. A fine layer of ice covers your weapon. On a hit, the target suffers the weapon attack’s normal effects, and its movement speed is reduced by 10 feet until the end of your next turn.",
 		"At Higher Levels. At 5th level, the attack deals an extra 1d8 cold damage to the target on a hit. That damage roll increases by 1d8 at 11th level (2d8) and 17th level (3d8).",
