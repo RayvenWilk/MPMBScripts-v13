@@ -6,7 +6,7 @@
 				Lightsabers (https://www.dandwiki.com/wiki/Lightsabers_(5e_Equipment)?fbclid=IwAR0m_TbS9ptOy6BxprNwDW3vxfaeXOpFYi_ckogdABUaOEseJKSlksuVI3g)
 	Coded by:	rayvenwilk
 	Date:		09.22.2021
-	Sheet:		v13.0.6 and newer
+	Sheet:		v13.0.5 and newer
 */
 
 var iFileName = "Lightsabers(transcribed by rayvenwilk).js";
@@ -114,9 +114,27 @@ MagicItemsList["kyber crystal weapon"] = {
             name : "Light Blue",
 			prefixOrSuffix : "suffix",
             source : ["HB"],
-            description : " +2 to attack",
+            description : " +2 to hit",
             modifiers : [2, 0]
         },
+		calcChanges : {
+			atkAdd : [
+				function (fields, v) {
+					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/light blue/i).test(v.WeaponTextName)) {
+						v.theWea.isMagicWeapon = true;
+						fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
+					}
+				},
+				'If I include the words "Light Blue" in the name of a lightsaber, it will be treated as the magic weapon Light Blue Lightsaber. It has +2 to hit.'
+			],
+			atkCalc : [
+				function (fields, v, output) {
+					if (v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/of vengeance/i).test(v.WeaponTextName)) {
+						output.magic = v.thisWeapon[1] + 1;
+					}
+				}, ''
+			]
+		}
     },
     "dark blue" : {
         name : "Dark Blue Lightsaber",
@@ -144,7 +162,7 @@ MagicItemsList["kyber crystal weapon"] = {
 			name : "Yellow",
 			prefixOrSuffix : "suffix",
 			source : ["HB"],
-			description : "+1 to attack, -1 light force cost",
+			description : "+1 to hit, -1 light force cost",
 			modifiers : [1, 0]
 		},
 	},
@@ -174,7 +192,7 @@ MagicItemsList["kyber crystal weapon"] = {
 			name : "Bronze",
 			prefixOrSuffix : "suffix",
 			source : ["HB"],
-			description : "+1 to attack & damage",
+			description : "+1 to hit & damage",
 			modifiers : [1, 1]
 		},
 	},
@@ -189,7 +207,7 @@ MagicItemsList["kyber crystal weapon"] = {
 			name : "Red",
 			prefixOrSuffix : "suffix",
 			source : ["HB"],
-			description : "+1 to attack & damage",
+			description : "+1 to hit & damage",
 			modifiers : [1, 1]
 		},
 	},
