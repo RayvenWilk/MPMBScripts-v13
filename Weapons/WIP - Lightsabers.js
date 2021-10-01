@@ -120,17 +120,18 @@ MagicItemsList["kyber crystal weapon"] = {
 		calcChanges : {
 			atkAdd : [
 				function (fields, v) {
-					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/light blue/i).test(v.WeaponTextName)) {
+					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*light blue).*$/i).test(v.WeaponTextName)) {
 						v.theWea.isMagicWeapon = true;
 						fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
+						fields.Description += (fields.Description ? '; ' : '') + '+2 to hit';
 					}
 				},
 				'If I include the words "Light Blue" in the name of a lightsaber, it will be treated as the magic weapon Light Blue Lightsaber. It has +2 to hit.'
 			],
 			atkCalc : [
 				function (fields, v, output) {
-					if (v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/of vengeance/i).test(v.WeaponTextName)) {
-						output.magic = v.thisWeapon[1] + 1;
+					if (v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/light blue/i).test(v.WeaponTextName)) {
+						output.magic = v.thisWeapon[1];
 					}
 				}, ''
 			]
