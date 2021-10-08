@@ -37,5 +37,5 @@ MagicItemsList["many-handed pouch"] = {
     weight : 1,
     rarity : "uncommon",
     prerequisite : "Requires Artificer class level 4",
-    prereqeval : function(e){return 4<=classes.known.artificer.level},
+    prereqeval : function(v) { return classes.known.artificer.level >= 4; },
 }
