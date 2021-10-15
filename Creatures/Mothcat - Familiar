@@ -1,0 +1,59 @@
+/*	-INFORMATION-
+	Subject:	Mothcat
+	Effect:		Add familiar Mothcat found online
+	Remarks:	This will add Mothcat to the creature options.
+	Coded by :	rayvenwilk
+	Date :		09.23.2021
+	Sheet:		v13.0.6
+*/
+
+var iFileName = "Creatures(transcribed by rayvenwilk.js";
+
+RequiredSheetVersion("13.0.6");
+
+
+CreatureList["mothcat"] = {
+	name : "Mothcat",
+	source : ["HB"],
+	size : 5,
+	type : "Beast",
+	companion : "familiar",
+	alignment : "Unaligned",
+	ac : 13,
+	hp : 15,
+	hd : [3, 6],
+	speed : "40 ft, climb 30 ft, fly 15ft",
+	proficiencyBonus : 2,
+	challengeRating : "1/4",
+	scores : [3, 20, 13, 10, 14, 15],
+	senses : "Blind sight 10ft, Darkvision 60 ft",
+	attacksAction : 1,
+	attacks : [{
+		name : "Bite",
+		ability : 2,
+		damage : [1, 4, "piercing"],
+		range : "melee (5 ft)",
+		description : "",
+	}, {
+		name : "Claws",
+		ability : 2,
+		damage : [1, 0, "slashing"],
+		range : "melee (5 ft)",
+		description : "Two claws attacks as an Attack action",
+	}],
+	skills : {
+		"Perception" : 3,
+		"Stealth" : 4,
+	},
+	damage_resistances : "adv on saves against spells and other magical effects",
+	languages : "Common, Sylvan, and any language its grown up around but does not speak",
+	traits : [{
+		name : "Keen Senses",
+		minlevel : 1,
+		description : "The mothcat has advantage on wisdom (perception) checks that rely on sight, hearing, or smell."
+  },{
+		name : "Limited Telepathy",
+		minlevel : 1,
+		description : "The mothcat can magically communicate simple ideas, emotions and images telepathically with one creature it holds a strong bond with."
+	}]
+}
