@@ -102,26 +102,26 @@ MagicItemsList["kyber crystal, dark blue"] = {
             var testRegex = /lightsaber/i;
             return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon));
         },
+    },
     calcChanges : {
         atkAdd : [
             function (fields, v) {
-				if (!v.theWea.isMagicWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*dark blue).*$/i).test(v.WeaponTextName)) {
-						v.theWea.isMagicWeapon = true;
-						fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
-						fields.Description += (fields.Description ? '; ' : '') + '+2 to damage';
-					}
-				},
-				'If I include the words "Dark Blue" in the name of a lightsaber, it will be treated as the magic weapon Light Blue Lightsaber. It has +2 to damage.'
+			if (!v.theWea.isMagicWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*dark blue).*$/i).test(v.WeaponTextName)) {
+				v.theWea.isMagicWeapon = true;
+				fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
+				fields.Description += (fields.Description ? '; ' : '') + '+2 to damage';
+                }
+            },
+			'If I include the words "Dark Blue" in the name of a lightsaber, it will be treated as the magic weapon Light Blue Lightsaber. It has +2 to damage.'
 			],
 		atkCalc : [
 			function (fields, v, output) {
                 if (v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/dark blue/i).test(v.WeaponTextName)) {
                     output.magic = v.thisWeapon[1];
                     output.extraDmg += 2;
-					}
-				},
-            ]
-        }
+                }
+			},
+         ]
     }
 },
 MagicItemsList["kyber crystal, yellow"] = {
@@ -141,7 +141,8 @@ MagicItemsList["kyber crystal, yellow"] = {
         excludeCheck : function (inObjKey, inObj) {
             var testRegex = /lightsaber/i;
             return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon));
-        },
+        }
+    },
         calcChanges : {
 			atkAdd : [
 				function (fields, v) {
@@ -158,12 +159,11 @@ MagicItemsList["kyber crystal, yellow"] = {
                 if (v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/yellow/i).test(v.WeaponTextName)) {
                     output.magic = v.thisWeapon[1];
                     output.extraHit += 1;
-					}
-				},
-            ]
-        }
-    },
-}
+				}
+			},
+        ]
+    }
+},
 MagicItemsList["kyber crystal, orange"] = {
     name : "Orange Kyber Crystal",
     source : ["HB"],
@@ -181,7 +181,8 @@ MagicItemsList["kyber crystal, orange"] = {
         excludeCheck : function (inObjKey, inObj) {
             var testRegex = /lightsaber/i;
             return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon));
-        },
+        }
+    },
         calcChanges : {
 			atkAdd : [
 				function (fields, v) {
@@ -193,7 +194,6 @@ MagicItemsList["kyber crystal, orange"] = {
 				},
 				'If I include the words "Orange" in the name of a lightsaber, it will be treated as the magic weapon Orange Lightsaber. It has +1 to damage & -1 light force cost'
 			],		
-        },
         atkCalc : [
 			function (fields, v, output) {
                 if (v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/orange/i).test(v.WeaponTextName)) {
@@ -221,7 +221,8 @@ MagicItemsList["kyber crystal, bronze"] = {
         excludeCheck : function (inObjKey, inObj) {
             var testRegex = /lightsaber/i;
             return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon));
-        },
+        }
+    },
         calcChanges : {
 			atkAdd : [
 				function (fields, v) {
@@ -237,11 +238,10 @@ MagicItemsList["kyber crystal, bronze"] = {
 				function (fields, v, output) {
 					if (v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/bronze/i).test(v.WeaponTextName)) {
 						output.magic = v.thisWeapon[1]+1;
-					}
-				},
-			],		
-        }
-    },
+                }
+            },
+        ]		
+    }
 },
 MagicItemsList["kyber crystal, red"] = {
     name : "Red Kyber Crystal",
@@ -260,20 +260,20 @@ MagicItemsList["kyber crystal, red"] = {
         excludeCheck : function (inObjKey, inObj) {
             var testRegex = /lightsaber/i;
             return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon));
-        },
-        calcChanges : {
-			atkAdd : [
-				function (fields, v) {
-					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*red).*$/i).test(v.WeaponTextName)) {
-						v.theWea.isMagicWeapon = true;
-						fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
-						fields.Description += (fields.Description ? '; ' : '') + '-2 dark force cost';
-					}
-				},
-				'If I include the words "Red" in the name of a lightsaber, it will be treated as the magic weapon Red Lightsaber. It has -2 dark force cost.'
-			],	
         }
     },
+    calcChanges : {
+		atkAdd : [
+			function (fields, v) {
+				if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*red).*$/i).test(v.WeaponTextName)) {
+					v.theWea.isMagicWeapon = true;
+					fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
+					fields.Description += (fields.Description ? '; ' : '') + '-2 dark force cost';
+				}
+			},
+			'If I include the words "Red" in the name of a lightsaber, it will be treated as the magic weapon Red Lightsaber. It has -2 dark force cost.'
+        ],	
+    }
 },
 MagicItemsList["kyber crystal, purple"] = {
     name : "Purple Kyber Crystal",
@@ -292,20 +292,20 @@ MagicItemsList["kyber crystal, purple"] = {
         excludeCheck : function (inObjKey, inObj) {
             var testRegex = /lightsaber/i;
             return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon));
-        },
-        calcChanges : {
-			atkAdd : [
-				function (fields, v) {
-					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*purple).*$/i).test(v.WeaponTextName)) {
-						v.theWea.isMagicWeapon = true;
-						fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
-						fields.Description += (fields.Description ? '; ' : '') + '-2 all force cost';
-					}
-				},
-				'If I include the words "Purple" in the name of a lightsaber, it will be treated as the magic weapon Purple Lightsaber. It has -2 all force cost.'
-			],		
         }
     },
+    calcChanges : {
+		atkAdd : [
+			function (fields, v) {
+				if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*purple).*$/i).test(v.WeaponTextName)) {
+					v.theWea.isMagicWeapon = true;
+					fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
+					fields.Description += (fields.Description ? '; ' : '') + '-2 all force cost';
+				}
+			},
+			'If I include the words "Purple" in the name of a lightsaber, it will be treated as the magic weapon Purple Lightsaber. It has -2 all force cost.'
+		],		
+    }
 },
 MagicItemsList["kyber crystal, white"] = {
     name : "White Kyber Crystal",
@@ -324,27 +324,27 @@ MagicItemsList["kyber crystal, white"] = {
         excludeCheck : function (inObjKey, inObj) {
             var testRegex = /lightsaber/i;
             return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon));
-        },
-        calcChanges : {
-			atkAdd : [
-				function (fields, v) {
-					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*white).*$/i).test(v.WeaponTextName)) {
-						v.theWea.isMagicWeapon = true;
-						fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
-						fields.Description += (fields.Description ? '; ' : '') + '+2 to hit & dmg';
-					}
-				},
-				'If I include the words "White" in the name of a lightsaber, it will be treated as the magic weapon White Lightsaber. It has +2 to hit & damage.'
-			],
-			atkCalc : [
-				function (fields, v, output) {
-					if (v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/white/i).test(v.WeaponTextName)) {
-						output.magic = v.thisWeapon[1]+2;
-					}
-				},
-			],		
         }
     },
+    calcChanges : {
+		atkAdd : [
+			function (fields, v) {
+				if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*white).*$/i).test(v.WeaponTextName)) {
+					v.theWea.isMagicWeapon = true;
+					fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
+					fields.Description += (fields.Description ? '; ' : '') + '+2 to hit & dmg';
+				}
+			},
+				'If I include the words "White" in the name of a lightsaber, it will be treated as the magic weapon White Lightsaber. It has +2 to hit & damage.'
+		],
+		atkCalc : [
+			function (fields, v, output) {
+				if (v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/white/i).test(v.WeaponTextName)) {
+					output.magic = v.thisWeapon[1]+2;
+				}
+			},
+		]		
+    }
 },
 MagicItemsList["kyber crystal, black"] = {
     name : "Black Kyber Crystal",
@@ -364,18 +364,18 @@ MagicItemsList["kyber crystal, black"] = {
         excludeCheck : function (inObjKey, inObj) {
             var testRegex = /lightsaber/i;
             return !(testRegex).test(inObjKey) && (!inObj.baseWeapon || !(testRegex).test(inObj.baseWeapon));
-        },
-        calcChanges : {
-			atkAdd : [
-				function (fields, v) {
-					if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*black).*$/i).test(v.WeaponTextName)) {
-						v.theWea.isMagicWeapon = true;
-						fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
-						fields.Description += (fields.Description ? '; ' : '') + '+2 to AC';
-					}
-				},
-				'If I include the words "Black" in the name of a lightsaber, it will be treated as the magic weapon Black Lightsaber. It has +2 bonus to AC.'
-			],
         }
     },
+    calcChanges : {
+		atkAdd : [
+			function (fields, v) {
+				if (!v.theWea.isMagicWeapon && v.isMeleeWeapon && (/lightsaber/i).test(v.baseWeaponName) && (/^(?=.*black).*$/i).test(v.WeaponTextName)) {
+					v.theWea.isMagicWeapon = true;
+					fields.Description = fields.Description.replace(/(, |; )?Counts as magical/i, '');
+					fields.Description += (fields.Description ? '; ' : '') + '+2 to AC';
+				}
+			},
+			'If I include the words "Black" in the name of a lightsaber, it will be treated as the magic weapon Black Lightsaber. It has +2 bonus to AC.'
+		],
+    }
 }
