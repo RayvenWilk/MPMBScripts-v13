@@ -1,0 +1,57 @@
+/*	-WHAT IS THIS?-
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
+	-KEEP IN MIND-
+	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
+*/
+
+/*	-INFORMATION-
+
+	Subject:	Magic Items
+	Sheet:		v13.0.6 and newer
+	Content:	The compiled homebrew magic items I've found online or were created by me or my DM/hubby.
+	Coded by:	rayvenwilk
+	
+*/
+
+var iFileName = "GriffonsSaddleBag[transcribed_by_rayvenwilk}.js";
+
+MagicItemsList["bandolier of the elements"] = {
+	name : "Bandolier of the Elements",
+	source : ["HB:TGS"],
+	type : "wondrous item",
+	rarity : "rare",
+	attunement : true,
+	usages : 6,
+	recovery : "dawn",
+	description : "As a bonus action after an attack action, you can throw 1 of the 6 daggers attached. On a hit it disappears, roll a 6d, to determine the 1d6 extra damage. On a miss, it reappears in the bandolier. 1d6 daggers reappear in the empty sheaths daily at dawn. 1. Acid 2. Cold 3. Fire 4. Lightning 5. Poison 6. Thunder",
+	descriptionFull : "This cross-chest bandolier has 6 magic daggers sheathed across it. When you take the Attack action whle wearing this bandolier, you can use a bonus action to throw 1 of the daggers, making a ranged attack with it, provided you have a free hand. When you hit a target with one of these daggers, roll a 6d and consult the table below. The target takes an extra 1d6 damage of the type determined by the table, in addition to the weapon's damage, and the dagger disappears. On a miss, the dagger vanishes and reappears in the bandolier." + "\n   " + "A dagger vanishes if you don't hurl it right away and immediately reappears in the bandolier. 1d6 missing daggers reappear in the bandolier's empty sheaths daily at dawn. \n   \u2022 1. Acid \n   \u2022 2. Cold \n   \u2022 3. Fire \n   \u2022 4. Lightning \n   \u2022 5. Poison \n   \u2022 6. Thunder",
+	weaponsAdd : "Elements Dagger",
+	weaponOptions : {
+		baseWeapon : "dagger",
+		regExpSearch : /^(?=.*elements)(?=.*dagger).*$/i,
+		name : "Bandolier of the Elements",
+		source : ["HB:TGS"],
+		range : "20/60 ft",
+		description : "Thrown, +1d6 dmg (acid/cold/fire/lightning/poison/thunder)",
+		abilitytodamage : true
+	}
+},
+MagicItemsList["frozen dagger"] = {
+	name : "Frozen Dagger",
+	source : ["HB:TGS"],
+	type : "weapon (dagger)",
+	rarity : "uncommon",
+	description : "Attacks made with this dagger deal Cold damage instead of piercing. If you roll a 20 , the target must succeed on a DC 12 Con saving throw or be paralyzed until the end of its next turn. If it succeeds, its movement speed is halved until the end of its next turn.",
+	descriptionFull : "Attacks made with this dagger deal cold damage instead of piercing. If you roll a 20 on an attack roll made with this magic weapon, the target must succeed on a DC 12 Constitution saving throw or be paralyzed until the end of its next turn, frozen in place and unable to move. If it succeeds, its movement speed is halved until the end of its next turn instead.",
+	weaponsAdd : "Frozen Dagger",
+	weaponOptions : {
+		baseWeapon : "dagger",
+		regExpSearch : /^(?=.*frozen)(?=.*dagger).*$/i,
+		name : "Frozen Dagger",
+		source : ["HB:TGS"],
+		abilitytodamage : true,
+		description : "Finesse, light, thrown; on crit DC 12 Con save 0 move & half on save",
+		damage : [1, 4, "cold"]
+	}
+}
