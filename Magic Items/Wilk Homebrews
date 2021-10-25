@@ -1,0 +1,84 @@
+/*	-WHAT IS THIS?-
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
+	-KEEP IN MIND-
+	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
+*/
+
+/*	-INFORMATION-
+
+	Subject:	Magic Items
+	Sheet:		v13.0.8 and newer
+	Content:	The compiled homebrew magic items created by me and my DM/hubby.
+	Coded by:	rayvenwilk
+	
+*/
+
+var iFileName = "specwilk Homebrew - Cloth of Weather Protection.js";
+
+SourceList["HB:WHB"] = {
+	name : "Wilk's Homebrews",
+	abbreviation : "HB:WHB",
+	group : "Homebrew",
+};
+
+MagicItemsList["cloth of weather protection"] = {
+	name : "Cloth of Weather Protection",
+	source : ["HB:WHB"],
+	type : "wondrous item",
+	rarity : "uncommon",
+	description : "This dark blue square of cloth contains 4 command words, resist cold - half cold dmg, resist heat - half fire dmg, resist wet - no disadvantage or penalties, longful rest - double rest.",
+	descriptionFull : "This 4in x 4in dark blue square of cloth contains 4 command words , one in each corner of the cloth and has the following functions:"+
+	"\n \u2022 1. Resist Cold - Upon the command the cloth will transform into a thick winter coat and will reduce half of any magical cold damage."+
+	"\n \u2022 2. Resist Heat - Upon the command, the cloth will transform into a lightweight jacket that has small fans woven into the inner lining, keeping the wearer from suffering negatives from extreme heat and will reduce magical heat damage by half."+
+	"\n \u2022 3. Resist Wet - Upon command, the cloth will transform into a coat that acts as a shield between the wearer and wet weather - rain, snow, etc. Any penalties normally taken for action in severe wet weather are negated while wearing this coat."+
+	"\n \u2022 4. Longful Rest - Upon command the cloth will transform into a blanket that will surround the owner creating a bed like surface protecting the possessor and allowing for an uninterrupted rest. Additionally this function enhances the sleep so that 1 hour of sleep is equal to 2 hours for all spell related rest periods."+
+	"\n \u2022 Each function can be used for a period of 8 total hours and they can be used independent of each other. Once a function is used, that function will need a long rest to recharge, If all charges are used up the cloth will rteun to its original form until each affect recharges - equal to 4 long rests.",
+	usages : "4",
+	recovery : "long rest"
+},
+MagicItemsList["quiver of endless arrows"] = {
+	name : "Quiver of Endless Arrows",
+	source : ["HB:WHB"],
+	type : "wondrous item",
+	rarity : "rare",
+	attunement : true,
+	weight : 5,
+	description : "This quiver holds 20 non-magical arrows, as soon as you pull an arrow from the quiver another arrow will magically reappear.",
+	descriptionFull : "This quiver holds 20 non-magical arrows, as soon as you pull an arrow from the quiver another arrow will magically reappear.",
+  },
+  MagicItemsList["exploding doll"] = {
+	name : "Exploding Doll",
+	source : ["HB:WHB"],
+	type : "wondrous item",
+	rarity : "very rare",
+	description : "See Notes page",
+	descriptionFull : "When the doll is placed standing in front of the possessor and the command words are spoken, the doll animates, stretches out its arms in front of it at shoulder height and starts to walk in a wabbling, unsteady fashion much like a child learning to walk. While walking the doll repeats the word “mama” intermixed with an unsettling and odd baby laugh. \nThe doll can go a maximum of 10’ on a flat and or even surface. Upon reaching the 10” limit, the doll will stop moving, raise its arms, as if wanting to be held. The eyes will emit a mild and soft glow just before the doll explodes causing 1d6 fire damage to all creatures and objects in a 5' radius with the doll being the center of that radius. Any flammable material, non-magical, must make a DC 19 Dex save or be destroyed. \nThe doll can be attacked. It has immunities to fire, lighting and cold. It has 20HP and has an Armor Class of 9. If the doll is reduced to 0 HP it will explode causing 1D8 fire damage and all creatures within a 10’ radius must make a DC 19 Dex save. On a failed save, the creature(s) is blinded for 1d4 rounds and has disadvantage on all attack rolls for 1d6 rounds. On a successful save, the creature is blinded for 1d4-1 rounds, but does not have disadvantage on attack rolls.",
+	toNotesPage : [{
+		name : "Exploding Doll",
+		note : "  When the doll is placed standing in front of the possessor and the command words are spoken, the doll animates, stretches out its arms in front of it at shoulder height and starts to walk in a wabbling, unsteady fashion much like a child learning to walk. While walking the doll repeats the word “mama” intermixed with an unsettling and odd baby laugh. \n   The doll can go a maximum of 10’ on a flat and or even surface. Upon reaching the 10” limit, the doll will stop moving, raise its arms, as if wanting to be held. The eyes will emit a mild and soft glow just before the doll explodes causing 1d6 fire damage to all creatures and objects in a 5' radius with the doll being the center of that radius. Any flammable material, non-magical, must make a DC 19 Dex save or be destroyed. \n   The doll can be attacked. It has immunities to fire, lighting and cold. It has 20HP and has an Armor Class of 9. If the doll is reduced to 0 HP it will explode causing 1D8 fire damage and all creatures within a 10’ radius must make a DC 19 Dex save. On a failed save, the creature(s) is blinded for 1d4 rounds and has disadvantage on all attack rolls for 1d6 rounds. On a successful save, the creature is blinded for 1d4-1 rounds, but does not have disadvantage on attack rolls.",
+	}]
+},
+MagicItemsList["bracers of deflection"] = {
+    name : "Bracers of Deflection",
+    source : ["HB:WHB"],
+    type : "wondrous item",
+    rarity : "uncommon",
+    usages : 5,
+    recovery : "short rest",
+    action : ["reaction", ""],
+    weight : 1,
+    description : "When you have been targeted by a ranged weapon you can use 1 charge of the bracers to possibly deflect the attack, roll 1d4 +1 and add the total to your AC for this attack. Bracers have 5 charges, regaining all charges after a short rest.",
+    descriptionFull : "While wearing these bracers, when you have been targeted by a ranged weapon you can use 1 charge of the bracers to possibly deflect the attack. As the projectile comes towards you, lift your arm and say the command word. A gust of force is blown away from you in the direction of the projectile, possibly causing the attack to miss. Roll 1d4 +1 and add the total to your AC for this attack. Bracers have 5 charges, regaining all charges after a short rest.",
+},
+MagicItemsList["bracer of hidden defense"] = {
+    name : "Bracer of Hidden Defense",
+    source : ["HB:WHB"],
+    type : "shield",
+    rarity : "uncommon",
+    action : ["bonus action", "(show/hide)"],
+    weight : 0.5,
+    description : "This armband is a +1 buckler that appears and disappears  when the command word is spoken.",
+    descriptionFull : "This armband is a +1 buckler that appears and disappears  when the command word is spoken.",
+    shieldAdd : ["Bracer of Hidden Defense", 3, 0.5],
+}
