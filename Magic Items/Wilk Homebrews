@@ -14,7 +14,7 @@
 	
 */
 
-var iFileName = "specwilk Homebrew - Cloth of Weather Protection.js";
+var iFileName = "MagicItems_Wilkhomebrew.js";
 
 SourceList["HB:WHB"] = {
 	name : "Wilk's Homebrews",
