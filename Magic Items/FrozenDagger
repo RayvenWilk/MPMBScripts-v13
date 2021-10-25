@@ -1,0 +1,36 @@
+/*	-WHAT IS THIS?-
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
+	-KEEP IN MIND-
+	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
+*/
+
+/*	-INFORMATION-
+
+	Subject:	Frozen Dagger
+	Sheet:		v13.0.8 and newer
+	Content:	This adds the magic item Frozen Dagger that I found online.
+	Coded by:	rayvenwilk
+	
+*/
+
+var iFileName = "FrozenDagger[transcribed_by_rayvenwilk].js";
+
+MagicItemsList["frozen dagger"] = {
+	name : "Frozen Dagger",
+	source : ["HB:TGS"],
+	type : "weapon (dagger)",
+	rarity : "uncommon",
+	description : "Attacks made with this dagger deal Cold damage instead of piercing. If you roll a 20 , the target must succeed on a DC 12 Con saving throw or be paralyzed until the end of its next turn. If it succeeds, its movement speed is halved until the end of its next turn.",
+	descriptionFull : "Attacks made with this dagger deal cold damage instead of piercing. If you roll a 20 on an attack roll made with this magic weapon, the target must succeed on a DC 12 Constitution saving throw or be paralyzed until the end of its next turn, frozen in place and unable to move. If it succeeds, its movement speed is halved until the end of its next turn instead.",
+	weaponsAdd : "Frozen Dagger",
+	weaponOptions : {
+		baseWeapon : "dagger",
+		regExpSearch : /^(?=.*frozen)(?=.*dagger).*$/i,
+		name : "Frozen Dagger",
+		source : ["HB:TGS"],
+		abilitytodamage : true,
+		description : "Finesse, light, thrown; on crit DC 12 Con save 0 move & half on save",
+		damage : [1, 4, "cold"]
+	}
+}
