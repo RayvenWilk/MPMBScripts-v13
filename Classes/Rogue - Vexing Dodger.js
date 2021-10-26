@@ -8,7 +8,7 @@
 /*  -INFORMATION-
 	Subject:    Vexing Dodger
 	Effect:     Add the subclass Vexing Dodger to the Rogue
-	Content:	Vexing Dodger by u/Psatch found here
+	Content:	Vexing Dodger by u/Psatch found here: https://www.reddit.com/r/UnearthedArcana/comments/owehqi/vexing_dodger_a_rogue_subclass_that_specializes/
 	Code by:	rayvenwilk
 	Date:		2021-10-18 (sheet 13.0.7)
 */
