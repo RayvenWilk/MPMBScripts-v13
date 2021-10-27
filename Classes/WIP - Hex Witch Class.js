@@ -92,6 +92,9 @@ ClassList["hex witch"] = {
             }),
             extraname : "Hexes",
             extrachoices : ["Cackle", "Commune with Spirits (prereq: Coven of Spirits, Coven of the Forest)", "Evil Eye", "Familiar Rituals", "Fiendish Appendage (prereq: Coven of Devils", "Good Fortune", "Lodestone", "Misfortune", "Rabbit's Foot", "Rotting Wound", "Poisoned Heart", "Twist of Fate", "Warded", "Witch's Familiar"],
+            extraTimes : levels.map(function (n) {
+                return n < 1 ? 1 : n < 5 ? 2 : n < 9 ? 3 : n < 13 ? 4 : n < 17 ? 5 : n < 20 ? 6 : 7;
+            }),
             "cackle" : {
                 name : "Cackle",
                 source : [["DSA", 9]],
@@ -174,7 +177,7 @@ ClassList["hex witch"] = {
                 description : "\n   As an action, you can expend a 1st level spell slot and touch one creature, warding them from harm for the next hour. While they are warded, you are aware of where they are and their emotional state so long as they stay within 1 mile of you. The next time the creature takes damage in the next hour, the ward explodes around them and they gain a number of temporary hit points equal to your proficiency bonus, which takes as much of the triggering damage as possible. Once the ward is activated, you can no longer locate them or sense their emotions. If you expend a spell slot of 2nd level or higher, the target gains additional temporary hit points equal to your proficiency bonus times the level of the spell slot. You can only have one ward active at a time, if you attempt to ward a second creature, the first ward dissipates and the warded creature gains no benefits from it.",
             },
 
-// need help with adding the familiar stats - HP based on character info            
+// need help with adding the familiar stats - HP based on character info and no hd listed            
             "witch's familiar" : {
                 name : "Witch's Familiar",
                 source : [["DSA", 11]],
