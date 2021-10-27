@@ -10,7 +10,7 @@
 	Effect:     Add the Hex Witch Class
 	Content:	The class of the Hex Witch (v1.1.5) by Dump Stat Adventures found here: https://www.gmbinder.com/share/-Lz-_rNijZNaMv3BpwVQ
 	Code by:	rayvenwilk
-	Date:		2021-10-18 (sheet 13.0.8)
+	Date:		2021-10-26 (sheet 13.0.6)
 */
 
 var iFileName = "Hex Witch By Dump Stat Adventures(transcribed_by_rayvenwilk).js";
