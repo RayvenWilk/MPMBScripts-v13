@@ -91,7 +91,7 @@ ClassList["hex witch"] = {
 				return n < 1 ? "" : (n < 2 ? 1 : n < 5 ? 2 : n < 9 ? 3 : n < 13 ? 4 : n < 17 ? 5 : n < 20 ? 6 : 7) + " known";
             }),
             extraname : "Hexes",
-            extrachoices : ["Cackle", "Commune with Spirits (prereq: Coven of Spirits, Coven of the Forest)", "Evil Eye", "Familiar Rituals", "Fiendish Appendage (prereq: Coven of Devils", "Good Fortune", "Lodestone", "Misfortune", "Rabbit's Foot", "Rotting Wound", "Poisoned Heart", "Twist of Fate", "Warded", "Witch's Familiar"],
+            extrachoices : ["Cackle", "Commune with Spirits (prereq: Coven of Spirits, Coven of the Forest)", "Evil Eye", "Familiar Rituals", "Fiendish Appendage (prereq: Coven of Devils)", "Good Fortune", "Lodestone", "Misfortune", "Rabbit's Foot", "Rotting Wound", "Poisoned Heart", "Twist of Fate", "Warded", "Witch's Familiar"],
             extraTimes : levels.map(function (n) {
                 return n < 1 ? 1 : n < 5 ? 2 : n < 9 ? 3 : n < 13 ? 4 : n < 17 ? 5 : n < 20 ? 6 : 7;
             }),
@@ -120,7 +120,7 @@ ClassList["hex witch"] = {
                 description : "\n   Your familiar becomes a way for you to store certain spells into them. Over the course of a short rest, you can feed a spell scroll containing a witch's spell, and is a ritual, to your familiar. They then consume the scroll, destroying it, and they learn the spell. You can then cast that spell as a ritual so long as you have this hex active and your familiar stays within 5 feet of you over the course of casting the spell. You must be able to cast the same level spells as that spell in order to feed it to your familiar. \n   If you lose this hex, you lose any ritual spells stored in your familiar. If you later gain this hex again, you must re-feed your familiar any lost ritual spell scrolls before you can use them again.",
                 prereqeval : function (v) { return GetFeatureChoice('class', 'hex witch', 'hexes') == 'Witches Familiar'; },
             },
-            "fiendish appendage (prereq: coven of devils" : {
+            "fiendish appendage (prereq: coven of devils)" : {
                 name : "Fiendish Appendage",
                 source : [["DSA", 10]],
                 description : "\n   As a bonus action, you can transform your arm into a horrifying limb, it appears as if it is blackened by fire and ends in twisting claws. On the same turn you summoned it, and on subsequent turns as a bonus action, you can hurl magical flames at a creature of your choice that is within 30 feet of you. Make a ranged spell attack, on a hit you deal fire damage equal to a number d6s equal to half your proficiency bonus (rounded down). \n   You can make this attack a number of times equal to your Intelligence modifier, regaining all spent uses on a long rest. Your arm only returns to normal after you use have used all available uses or after you finish a long rest.",
@@ -229,6 +229,9 @@ ClassList["hex witch"] = {
             }),
             extraname : "Major Hexes",
             extrachoices : ["Agony", "Blessing of Mother Night (prereq: level 13)", "Chaos Link", "Devil's Sight", "Fade away", "Hag's Eye", "Hex Bag", "Improved Evil Eye (prereq: Evil Eye hex)", "Improved Familiar", "Improved Ward (prereq: Ward hex)", "Summon Locusts"],
+            extraTimes : levels.map(function (n)  {
+                return n < 9 ? 0 : n < 13 ? 1 : 2;
+            }),
             "agony" : {
                 name : "Agony",
                 source : [["DSA", 12]],
@@ -238,7 +241,7 @@ ClassList["hex witch"] = {
                 name : "Blessing of Mother Night",
                 source : [["DSA", 12]],
                 description : "\n   You become shielded from divination magic as if you are under the protection of a nondetection spell.",
-                prereqeval : function(v) { return classes.known.witch.level >= 13; },
+                prereqeval : function(v) { return classes.known['hex witch'].level >= 13; },
             },
             "chaos link" : {
                 name : "Chaos Link",
@@ -316,7 +319,7 @@ ClassList["hex witch"] = {
             minlevel : 17,
             description : "\n   " + 'Use the "Choose Feature" button above to add a Grand Hex to the third page' + "\n   " + "Whenever I gain a hex witch level, I can replace a hex I know with another.",
             extraname : "Major Hexes",
-            extrachoices : ["Black Night", "Curse of the Therianthrope", "Flight", "Greater Familiar (prereq: Improved Familiar Hex", "Waxen Form", "Witch's Hut", "Witch Sight"],
+            extrachoices : ["Black Night", "Curse of the Therianthrope", "Flight", "Greater Familiar (prereq: Improved Familiar Hex)", "Waxen Form", "Witch's Hut", "Witch Sight"],
             "black night" : {
                 name : "Black Night",
                 source : [["DSA", 13]],
@@ -346,8 +349,8 @@ ClassList["hex witch"] = {
                 description : "\n   You gain a fly speed equal to twice your walking speed",
             },
 // HP calc help            
-            "greater familiar" : {
-                name : "Greater Familiar",
+            "greater familiar (prereq: improved familiar hex)" : {
+                name : "Greater Familiar (prereq: improved familiar hex)",
                 source : [["DSA", 13]],
                 description : "\n   Your Witch Familiar has grown far more powerful and now gains an additional number of Hit Points equal to your witch level times three. Additionally, you can cast your hexes through your familiar as if you were standing in its location and you can take a reaction that when you, or the familiar, takes damage you can split the damage in half between you and the familiar.",
                 prereqeval : function (v) { return GetFeatureChoice('class', 'hex witch', 'hexes') == 'Improved Familiar'; },
@@ -524,29 +527,29 @@ AddSubClass("hex witch", "coven of the forest", {
                     name : "Claws",
                     damage : [1, 10, "slashing"],
                 },
-                "porcupine" : {
-                    name : "Porcupine",
-                    source : [["DSA", 7]],
-                    description : "\n   I grow hollow needles across my skin like that of a porcupine and when a creature touches me or hits me with a melee attack while within 5 feet of me, it takes 1d6 piercing damage.",
-                },
-                "bat" : {
-                    name : "Bat",
-                    source : [["DSA", 7]],
-                    description : "\n   My ears grow double their size and I gain blindsight to a range of 60 feet. If I am deafened, I lose my blindsight.",
-                    vision : [["Blindsight", 60]],
-                },
+            },
+            "porcupine" : {
+                name : "Porcupine",
+                source : [["DSA", 7]],
+                description : "\n   I grow hollow needles across my skin like that of a porcupine and when a creature touches me or hits me with a melee attack while within 5 feet of me, it takes 1d6 piercing damage.",
+            },
+            "bat" : {
+                name : "Bat",
+                source : [["DSA", 7]],
+                description : "\n   My ears grow double their size and I gain blindsight to a range of 60 feet. If I am deafened, I lose my blindsight.",
+                vision : [["Blindsight", 60]],
+            },
 // need calc if there is one                
-                "frog" : {
-                    name : "Frog",
-                    source : [["DSA", 7]],
-                    description : "\n   I grow webbed hands and feet and I gain a swim speed equal to my walk speed.",
-                },
+            "frog" : {
+                name : "Frog",
+                source : [["DSA", 7]],
+                description : "\n   I grow webbed hands and feet and I gain a swim speed equal to my walk speed.",
+            },
 // need calc if there is one
-                "spider" : {
-                    name : "Spider",
-                    source : [["DSA", 7]],
-                    description : "\n   I sprout small hairs across the palm of my hands and I gain a climb speed equal to my walk speed. I must always keep one hand on the climbing surface in order to not fall.",
-                },
+            "spider" : {
+                name : "Spider",
+                source : [["DSA", 7]],
+                description : "\n   I sprout small hairs across the palm of my hands and I gain a climb speed equal to my walk speed. I must always keep one hand on the climbing surface in order to not fall.",
             },
         },
 // can the creatures be added - use choices?       
