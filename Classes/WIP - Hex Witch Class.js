@@ -177,41 +177,55 @@ ClassList["hex witch"] = {
                 description : "\n   As an action, you can expend a 1st level spell slot and touch one creature, warding them from harm for the next hour. While they are warded, you are aware of where they are and their emotional state so long as they stay within 1 mile of you. The next time the creature takes damage in the next hour, the ward explodes around them and they gain a number of temporary hit points equal to your proficiency bonus, which takes as much of the triggering damage as possible. Once the ward is activated, you can no longer locate them or sense their emotions. If you expend a spell slot of 2nd level or higher, the target gains additional temporary hit points equal to your proficiency bonus times the level of the spell slot. You can only have one ward active at a time, if you attempt to ward a second creature, the first ward dissipates and the warded creature gains no benefits from it.",
             },
 
-// need help with adding the familiar stats - HP based on character info and no hd listed            
+/* need help with adding the familiar stats -
+AC adds character Int mod - how do I do that?
+HP based on character info and no hd listed - how do I do that?
+Character gets bonuses based on familiar picked - how/where do I add that?
+Attack mod is based on character spell attack mod - how do I do that?
+*/
             "witch's familiar" : {
                 name : "Witch's Familiar",
                 source : [["DSA", 11]],
                 description : "\n   You gain the aid of a familiar that helps you unlock the secrets of your power. The familiar is bound to you and will obey all your commands. In combat, the familiar shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you use a bonus action on your turn to command it to take an action in its stat block or the Dash, Disengage, Help, Hide or Search action. If your familiar dies, you can perform a special ritual over the course of a long rest, regrowing their bodies and inviting their spirit back.",
-/* fox, imp, sprite or toad... I should do choices for this... will do it later
-                creaturesAdd : [["Witch's Familiar"]],
-                creatureOptions : [{
-                    name : "Witch's Familiar",
-                    source : [["DSA", 11]],
-                    size : 3,
-                    type : "Celestial",
-                    alignment : "Neutral",
-                    ac : 10,
-                    hp : function (totalHD, HDobj, prefix) {
-                        if (classes.known.witch) {
-                            return [classes.known.witch.level"];
-                    },
-                    hd : [],
-                    speed : "30 ft",
-                    scores : [10, 12, 12, 2, 12, 5],
-                    damage_resistances : "radiant",
-                    condition_immunities : "charmed, frightened",
-                    passivePerception : 11,
-                    languages : "same as caster",
-                    proficiencyBonus : 2,
-                    attacksAction : 1,
-                    attacks : [{
-                        name : "Slam",
-                        ability : 
-                        damage : [1, 6, "Bludgeoning"],
-                        range : "Melee"
-                        abilitytodamage : true,
+                action : ["bonus action", " (attack)"]
+/* Way too many questions on this
+                extraname : "Witch's Familiar",
+                extrachoices : ["Celestial Fox", "Celestial Imp", "Celestial Sprite", "Celestial Toad"],
+                "celestial fox" : {
+                    creaturesAdd : [["Celestial Fox"]],
+                    creatureOptions : [{
+                        name : "Celestial Fox",
+                        companion : "Familiar",
+                        source : ["DSA", 11],
+                        size : 3,
+                        type : "Celestial",
+                        alignment : "Neutral",
+                        ac : 10, // plus character Int Mod
+                        hp : 1, // + character Int mod + character level in this class
+                        hd : [],
+                        hdLinked : [], // what do I put here?
+                        speed : "30 ft",
+                        scores : [10, 12, 12, 2, 12, 5],
+                        saves : // not sure what to put here
+                        damage_resistances : "radiant",
+                        condition_immunities : "charmed, frightened"
+                        passivePerception : 11,
+                        languages : "understands the languages of its creator",
+                        challengeRating : // not listed
+                        proficiencyBonus : 2,
+                        attacksAction : 1,
+                        attacks : [{
+                            name : "Slam",
+                            ability : "not sure"
+                            damage : [1, 6, Bludgeoning] 
+                            modifiers : ["Character Spell attack mod", "max(oInt|0"] // how do I script the spell atk mod? Is the damage part correct?
+                            range: "Melee (5 ft)",
+                            description : "", 
+                            abilitytodamage: // not sure what to put here
+                        }],
                     }]
-                    */
+                }
+*/
             },
         },
         "subclassfeature3" : {
@@ -318,6 +332,7 @@ ClassList["hex witch"] = {
             source : [["DSA", 4]],
             minlevel : 17,
             description : "\n   " + 'Use the "Choose Feature" button above to add a Grand Hex to the third page' + "\n   " + "Whenever I gain a hex witch level, I can replace a hex I know with another.",
+            extraTimes : [1],
             extraname : "Major Hexes",
             extrachoices : ["Black Night", "Curse of the Therianthrope", "Flight", "Greater Familiar (prereq: Improved Familiar Hex)", "Waxen Form", "Witch's Hut", "Witch Sight"],
             "black night" : {
@@ -514,6 +529,7 @@ AddSubClass("hex witch", "coven of the forest", {
             action : ["bonus action", ""],
             usages : 1,
             recovery : "short rest",
+            extraTimes : [1],
             extraname : "Beastly Nature",
             extrachoices : ["Wolf", "Porcupine", "Bat", "Frog", "Spider"],
             "wolf" : {
@@ -538,26 +554,26 @@ AddSubClass("hex witch", "coven of the forest", {
                 source : [["DSA", 7]],
                 description : "\n   My ears grow double their size and I gain blindsight to a range of 60 feet. If I am deafened, I lose my blindsight.",
                 vision : [["Blindsight", 60]],
-            },
-// need calc if there is one                
+            },                
             "frog" : {
                 name : "Frog",
                 source : [["DSA", 7]],
                 description : "\n   I grow webbed hands and feet and I gain a swim speed equal to my walk speed.",
+                speed : { swim : { spd : "walk", enc : "walk"} },
             },
-// need calc if there is one
             "spider" : {
                 name : "Spider",
                 source : [["DSA", 7]],
                 description : "\n   I sprout small hairs across the palm of my hands and I gain a climb speed equal to my walk speed. I must always keep one hand on the climbing surface in order to not fall.",
+                speed : { climb : { spd : "walk", enc : "walk"} },
             },
-        },
-// can the creatures be added - use choices?       
+        },      
         "subclassfeature14" : {
             name : "Forest Nature",
             source : [["DSA", 7]],
             minlevel : 14,
             description : " (see notes page)",
+            action : ["bonus action", " (command)"],
             usages : 1,
             recovery : "long rest",
             toNotesPage : {
@@ -566,7 +582,130 @@ AddSubClass("hex witch", "coven of the forest", {
                 page3notes : true,
                 popupName : "Forest Nature"
             },
-        },
+            extraTimes : [1],
+            extraname : "Forest Nature",
+            extrachoices : ["Twig Blight", "Needle Blight", "Vine Blight"],
+            "twig blight" : {
+                name : "Twig Blights",
+                source : [["DSA", 7]],
+                description : "I summon 4 Twig Blights",
+                creaturesAdd : ["Twig Blight"],
+                creatureOptions : {
+                    name : "Twig Blight",
+	                source : ["M", 32],
+	                size : 4, //Small
+	                type : "Plant",
+	                alignment : "Neutral Evil",
+	                ac : 13,
+	                hp : 4,
+	                hd : [1, 6], //[#, die]
+	                speed : "20 ft",
+	                scores : [6, 13, 12, 4, 8, 3], //[Str, Dex, Con, Int, Wis, Cha]
+	                damage_vulnerabilities : "fire",
+	                condition_immunities : "blinded, deafened",
+	                senses : "Blindsight 60 ft (blind beyond this radius).",
+	                passivePerception : 9,
+	                languages : "understands Common but can't speak",
+	                challengeRating : "1/8",
+	                proficiencyBonus : 2,
+	                attacksAction : 1,
+	                attacks : [{
+			                name : "Claws",
+			                ability : 2,
+			                damage : [1, 4, "piercing"], //[#, die, type] "" for die is allowed
+			                range : "Melee (5 ft)",
+			                description : ""
+		            }],
+	                traits : [{
+			            name : "False Appearance",
+			            description : "While the blight remains motionless, it is indistinguishable from a dead shrub."
+		            }
+	                ],
+                },
+            },
+            "needle blight" : {
+                name : "Needle Blights",
+                source : [["DSA", 7]],
+                description : "I summon 2 Needle Blights",
+                creaturesAdd : ["Needle Blight"],
+                creatureOptions : {
+                    name : "Needle Blight",
+	                source : ["M", 32],
+	                size : 3, //Medium
+                	type : "Plant",
+                	alignment : "Neutral Evil",
+                	ac : 12,
+                	hp : 11,
+                	hd : [2, 8], //[#, die]
+                	speed : "30 ft",
+                	scores : [12, 12, 13, 4, 8, 3], //[Str, Dex, Con, Int, Wis, Cha]
+                	condition_immunities : "blinded, deafened",
+                	senses : "Blindsight 60 ft (blind beyond this radius).",
+                	passivePerception : 9,
+                	languages : "understands Common but can't speak",
+                	challengeRating : "1/4",
+                	proficiencyBonus : 2,
+                	attacksAction : 1,
+                	attacks : [{
+			            name : "Claws",
+			            ability : 2,
+			            damage : [2, 4, "piercing"], //[#, die, type] "" for die is allowed
+			            range : "Melee (5 ft)",
+			            description : ""
+		            }, {
+			            name : "Needles",
+			            ability : 2,
+			            damage : [2, 6, "piercing"], //[#, die, type] "" for die is allowed
+			            range : "30/60 ft",
+			            description : ""
+		            }],
+                },
+            },
+            "vine blight" : {
+                name : "Vine Blight",
+                source : [["DSA", 7]],
+                description : "I summon 1 Vine Blight",
+                creaturesAdd : ["Vine Blight"],
+                creatureOptions : {
+                    name : "Vine Blight",
+                	source : ["M", 32],
+                	size : 3, //Medium
+                	type : "Plant",
+                	alignment : "Neutral Evil",
+                	ac : 12,
+                	hp : 26,
+                	hd : [4, 8], //[#, die]
+                	speed : "10 ft",
+                	scores : [15, 8, 14, 5, 10, 3], //[Str, Dex, Con, Int, Wis, Cha]
+                	skills : {
+                		"stealth" : 1
+                	},
+                	condition_immunities : "blinded, deafened",
+                	senses : "Blindsight 60 ft (blind beyond this radius).",
+                	passivePerception : 9,
+                	languages : "Common",
+                	challengeRating : "1/2",
+                	proficiencyBonus : 2,
+                	attacksAction : 1,
+                	attacks : [{
+            			name : "Constrict",
+            			ability : 1,
+            			damage : [2, 6, "bludgeoning"], //[#, die, type] "" for die is allowed
+            			range : "Melee (10 ft)",
+            			description : "Large or smaller target is grappled and restrained (escape DC 12); Can't use constrict again until grapple ends"
+            		}],
+                	traits : [{
+            			name : "False Appearance",
+            			description : "While the blight remains motionless, it is indistinguishable from a tangle of vines."
+            		}],
+                	actions : [{
+        			    name : "Entangling Plants (Recharge 5-6)",
+        			    description : "As an action, grasping roots and vines sprout in a 15-ft radius centered on the blight, withering away after 1 minute. For the duration, that area is difficult terrain for nonplant creatures. In addition, each creature of the blight's choice in that area when the plants appear must succeed on a DC 12 Strength saving throw or become restrained. A creature can use its action to make a DC 12 Strength check, freeing it self or another entangled creature within reach on a success."
+	            	}],
+	                wildshapeString : "Blindsight 60 ft (blind beyond)| Immune to blinded, deafened| Entangling Plants (Recharge 5-6): As an action, 15-ft radius is difficult terrain for nonplant creatures, for 1 minute. Chosen creatures in it must make a DC 12 Str save or become restrained. A creature can use its action to make a DC 12 Str check to free itself or another within reach| False Appearance: While motionless, it's indistinguishable from a tangle of vines."
+                },
+            },
+        },    
     },
 }),
 AddSubClass("hex witch", "coven of graves", {
