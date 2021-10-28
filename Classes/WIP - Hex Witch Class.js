@@ -114,11 +114,12 @@ ClassList["hex witch"] = {
                 usagescalc : "event.value = Math.max(1, What('Int Mod'));",
                 recovery : "long rest",
             },
+// prereq is wrong
             "familiar rituals" : {
                 name : "Familiar Rituals (prerequisite: Witches Familiar hex",
                 source : [["DSA", 10]],
                 description : "\n   Your familiar becomes a way for you to store certain spells into them. Over the course of a short rest, you can feed a spell scroll containing a witch's spell, and is a ritual, to your familiar. They then consume the scroll, destroying it, and they learn the spell. You can then cast that spell as a ritual so long as you have this hex active and your familiar stays within 5 feet of you over the course of casting the spell. You must be able to cast the same level spells as that spell in order to feed it to your familiar. \n   If you lose this hex, you lose any ritual spells stored in your familiar. If you later gain this hex again, you must re-feed your familiar any lost ritual spell scrolls before you can use them again.",
-                prereqeval : function (v) { return GetFeatureChoice('class', 'hex witch', 'hexes') == 'Witches Familiar'; },
+                prereqeval : function (v) { return GetFeatureChoice('class', 'hex witch', 'hexes') ==  ["Witch's Familiar"]; },
             },
             "fiendish appendage (prereq: coven of devils)" : {
                 name : "Fiendish Appendage",
