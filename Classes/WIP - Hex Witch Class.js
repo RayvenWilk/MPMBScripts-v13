@@ -104,6 +104,7 @@ ClassList["hex witch"] = {
                 name : "Commune with Spirits",
                 source : [["DSA", 10]],
                 description : "\n   You invoke the spirits and gain proficiency with any skill that requires Charisma, Intelligence or Wisdom. You can invoke a different spirit over the course of a long rest to change the skill to another.",
+                prereqeval : function (v) { return classes.known['hex witch'].subclass == ['Coven of Spirits'] || classes.known['hex witch'].subclass == ['Coven of the Forest']},
             },
             "evil eye" : {
                 name : "Evil Eye",
@@ -114,12 +115,11 @@ ClassList["hex witch"] = {
                 usagescalc : "event.value = Math.max(1, What('Int Mod'));",
                 recovery : "long rest",
             },
-// prereq is wrong
             "familiar rituals" : {
                 name : "Familiar Rituals (prerequisite: Witches Familiar hex",
                 source : [["DSA", 10]],
                 description : "\n   Your familiar becomes a way for you to store certain spells into them. Over the course of a short rest, you can feed a spell scroll containing a witch's spell, and is a ritual, to your familiar. They then consume the scroll, destroying it, and they learn the spell. You can then cast that spell as a ritual so long as you have this hex active and your familiar stays within 5 feet of you over the course of casting the spell. You must be able to cast the same level spells as that spell in order to feed it to your familiar. \n   If you lose this hex, you lose any ritual spells stored in your familiar. If you later gain this hex again, you must re-feed your familiar any lost ritual spell scrolls before you can use them again.",
-                prereqeval : function (v) { return GetFeatureChoice('class', 'hex witch', 'hexes') ==  ["Witch's Familiar"]; },
+                prereqeval : function (v) { return GetFeatureChoice('class', 'hex witch', 'hexes') ==  ['Witch\'s Familiar']},
             },
             "fiendish appendage (prereq: coven of devils)" : {
                 name : "Fiendish Appendage",
@@ -129,6 +129,7 @@ ClassList["hex witch"] = {
                 usages : "Intelligence modifier per",
                 usagescalc : "event.value = Math.max(1, What('Int Mod'));",
                 recovery : "long rest",
+                prereqeval : function (v) { return classes.known['hex witch'].subclass == ['Coven of Devils']},
             },
             "good fortune" : {
                 name : "Good Fortune",
@@ -189,7 +190,10 @@ Attack mod is based on character spell attack mod - how do I do that?
                 source : [["DSA", 11]],
                 description : "\n   You gain the aid of a familiar that helps you unlock the secrets of your power. The familiar is bound to you and will obey all your commands. In combat, the familiar shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you use a bonus action on your turn to command it to take an action in its stat block or the Dash, Disengage, Help, Hide or Search action. If your familiar dies, you can perform a special ritual over the course of a long rest, regrowing their bodies and inviting their spirit back.",
                 action : ["bonus action", " (attack)"]
-/* Way too many questions on this
+
+
+/* Way too many questions on this - I've haven't done all the animals since I have no clue with just one... copy/paste once Fox is figured out
+
                 extraname : "Witch's Familiar",
                 extrachoices : ["Celestial Fox", "Celestial Imp", "Celestial Sprite", "Celestial Toad"],
                 "celestial fox" : {
@@ -243,7 +247,7 @@ Attack mod is based on character spell attack mod - how do I do that?
             additional : levels.map(function (n) { return n < 9 ? "" : (n < 13 ? 1 : 2)
             }),
             extraname : "Major Hexes",
-            extrachoices : ["Agony", "Blessing of Mother Night (prereq: level 13)", "Chaos Link", "Devil's Sight", "Fade away", "Hag's Eye", "Hex Bag", "Improved Evil Eye (prereq: Evil Eye hex)", "Improved Familiar", "Improved Ward (prereq: Ward hex)", "Summon Locusts"],
+            extrachoices : ["Agony", "Blessing of Mother Night (prereq: level 13)", "Chaos Link", "Devil's Sight", "Fade away", "Hag's Eye", "Hex Bag", "Improved Evil Eye (prereq: Evil Eye hex)", "Improved Familiar", "Improved Ward (prereq: Warded hex)", "Summon Locusts"],
             extraTimes : levels.map(function (n)  {
                 return n < 9 ? 0 : n < 13 ? 1 : 2;
             }),
@@ -313,10 +317,11 @@ Attack mod is based on character spell attack mod - how do I do that?
                 source : [["DSA", 13]],
                 description : "\n   Your Witch Familiar supernaturally grows more powerful and now gains an additional number of Hit Points equal to your witch level times two. Additionally, it no longer needs your bonus action to take the Attack action and its damage increases from 1d6 to 1d8. Also, if your familiar dies, you can choose to expend a spell slot of 3rd level or higher to resurrect them with all their hit points after 1 minute instead of over the course of a long rest.",
             },
-            "improved ward (prereq: ward hex)" : {
+            "improved ward (prereq: warded hex)" : {
                 name : "Improved Ward",
                 source : [["DSA", 13]],
                 description : "\n   Your wards have grown in power and while a creature is warded by you, you are aware of their location while they are within 10 miles of you and can talk to them telepathically while they remain within that range. When your ward is activated, all creatures of the warded creature's choice within 10 feet of them must succeed on a Constitution saving throw or take force damage equal to the number of Temporary Hit Points the warded creature gains. They take half damage on a successful save.",
+                prereqeval : function (v) { return GetFeatureChoice('class', 'hex witch', 'hexes') == 'Warded'; },
             },
             "summon locusts" : {
                 name : "Summon Locusts",
