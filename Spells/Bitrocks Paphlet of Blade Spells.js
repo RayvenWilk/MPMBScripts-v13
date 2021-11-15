@@ -70,7 +70,7 @@ SpellsList["judjement strike"] = {
 	compMaterial : "a weapon worth at least 1cp",
 	duration : "1 rnd",
 	description : "",
-	descriptionCantripDie : "Melee wea atk w/ cast +`CD-1`d10 Lightning dmg; start of next turn +`CD`d10 Lightning dmg",
+	descriptionCantripDie : "Wea atk w/ cast +`CD-1`d10 Lightning dmg; start of next turn +`CD`d10 Lightning dmg",
 	descriptionFull : desc([
 		"You brandish the weapon used in the spell’s casting and make a weapon attack with it against one creature within your reach. On a hit, the target suffers the weapon attack’s normal effects, and the spot they stand on is marked for a lightning strike. At the start of your next turn, a bolt of lightning strikes from the sky, dealing 1d10 lightning damage to any creature currently standing on that spot."
 		+ AtHigherLevels + "This spell’s damage increases when you reach certain levels. At 5th level, the melee attack deals an extra 1d10 lightning damage to the target on a hit, and the damage of the lightning strike increases to 2d10. Both damage rolls increase by 1d10 at 11th level (2d10 and 3d10) and again at 17th level (3d10 and 4d10).",
