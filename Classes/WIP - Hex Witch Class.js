@@ -10,7 +10,7 @@
 	Effect:     Add the Hex Witch Class
 	Content:	The class of the Hex Witch (v1.1.5) by Dump Stat Adventures found here: https://www.gmbinder.com/share/-Lz-_rNijZNaMv3BpwVQ
 	Code by:	rayvenwilk
-	Date:		2021-10-26 (sheet 13.0.6)
+	Date:		2021-10-26 (sheet 13.0.8)
 */
 
 var iFileName = "Hex Witch By Dump Stat Adventures(transcribed_by_rayvenwilk).js";
@@ -207,11 +207,11 @@ Attack mod is based on character spell attack mod - how do I do that?
                         alignment : "Neutral",
                         ac : 10, // plus character Int Mod
                         hp : 1, // + character Int mod + character level in this class
-                        hd : [],
+                        hd : [], // none given
                         hdLinked : [], // what do I put here?
                         speed : "30 ft",
                         scores : [10, 12, 12, 2, 12, 5],
-                        saves : // not sure what to put here
+                        saves : // not sure where to find this info
                         damage_resistances : "radiant",
                         condition_immunities : "charmed, frightened"
                         passivePerception : 11,
@@ -222,11 +222,11 @@ Attack mod is based on character spell attack mod - how do I do that?
                         attacks : [{
                             name : "Slam",
                             ability : "not sure"
-                            damage : [1, 6, Bludgeoning] 
+                            damage : [1, 6, "bludgeoning"] 
                             modifiers : ["Character Spell attack mod", "max(oInt|0"] // how do I script the spell atk mod? Is the damage part correct?
                             range: "Melee (5 ft)",
                             description : "", 
-                            abilitytodamage: // not sure what to put here
+                            abilitytodamage: // not sure where to find this info
                         }],
                     }]
                 }
