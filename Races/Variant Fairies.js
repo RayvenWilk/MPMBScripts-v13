@@ -14,6 +14,8 @@
 	Date:		2021-11-15 (sheet v13.0.8)
 */
 
+// weapon calculations are not done - need help with those (arcana and death fairy)
+
 var iFileName = "Variant Fairy Race (transcribed by rayvenwilk).js";
 
 RaceList["mind fairy"] = {
