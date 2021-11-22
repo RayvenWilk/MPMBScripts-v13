@@ -31,7 +31,7 @@ AddSubClass("paladin", "oath of the raven", {
 			name : "Channel Divinity: Furtive Aura",
 			source : ["OGC", 1],
 			minlevel : 3,
-			description : "\n   As a bonus action, I make my opponents forget about me until the end of my turn. I do not actually become invisible, but my enemies stop paying attention to me \u0026 I am considered to be hidden (see the Combat chapter).\n   Creatures who can see the invisible can make a Wis save to resist this effect.",
+			description : "\n   As a bonus action, I make my opponents forget about me until the end of my turn. I am considered to be hidden (see the Combat chapter).\n   Creatures who can see the invisible can make a Wis save to resist this effect.",
 			action : ["bonus action", ""],
 			spellcastingExtra : ["bane", "disguise self", "darvision", "branding smite", "haste", "nondetection", "confusion", "hallucinatory terrain", "commune", "teleportation circle"],
 		},
@@ -39,26 +39,26 @@ AddSubClass("paladin", "oath of the raven", {
 			name : "Channel Divinity: Repel Evil",
 			source : ["OGC", 1],
 			minlevel : 3,
-			description : "\n   As an action, I present my holy symbol \u0026 each enemy humanoid, fey, or fiend of Medium size or less \u0026 of evil alignment that can see me within 30 feet of me must make a Wis save or be frightened of me for 1 minute."
+			description : "\n   As an action, I present my holy symbol \u0026 each enemy humanoid, fey, or fiend of Med size or less \u0026 of evil alignment that can see me w/in 30 feet of me must make a Wis save or be frightened of me for 1 minute."
 		},
 		"subclassfeature3.2" : {
 			name : "Shadow Vigilante",
 			source : ["OGC", 1],
 			minlevel : 3,
-			description : "\n   I gain proficiency with the Investigation skill or with the Stealth skill.\n   If I am already proficient in both of these skills, I choose one and my proficiency bonus is doubled for any ability check I make that uses it.",
+			description : "\n   I gain prof w/ either Investigation or Stealth.\n   If already proficient, I can double my proficiency bonus on ability checks for one.",
 		},
 		"subclassfeature7" : {
 			name : "Redirected Strike",
 			source : ["OGC", 1],
 			minlevel : 7,
-			description : "\n   When a creature misses a melee attack against me, I can immediately use my reaction to redirect this attack against another creature of my choice within 5 feet of the initial attacker.\n   The initial attacker rerolls the attack against the designated creature with disadvantage.",
+			description : "\n   When a crea misses a melee atk vs me, I can use my reaction to redirect it against another of my choice w/in 5 ft of the attacker.\n   The attacker rerolls against the designated crea w/ disadv.",
 			action : ["reaction", ""]
 		},
 		"subclassfeature15" : {
 			name : "Exploit Weakness",
 			source : ["OGC", 1],
 			minlevel : 15,
-			description : "I can analyze an opponent’s fighting style by watching it fight for at least two rounds. This requires no action on my part, but I can only analyze one creature at a time.\n   Once the two rounds have elapsed, at the start of each of my subsequent turns, I can choose either to have advantage on my attacks against the analyzed creature or to give it disadvantage on its attacks against me.\n   I can’t use this feature again until I finish a short or long rest.",
+			description : "I can analyze an opponent’s fighting style,this requires no action on my part, but only one crea.\n   After two rnd, at the start of each subsequent turn, I can choose either have adv on my atk or give it disadv on its atk vs me.\n   I can’t use this feature again until I finish a short/long rest.",
 			limfeaname : "Exploit Weakness",
 			usages : 1,
 			recovery : "short rest",
@@ -67,7 +67,7 @@ AddSubClass("paladin", "oath of the raven", {
 			name : "Absolution in Darkness",
 			source : ["OGC", 1],
 			minlevel : 20,
-			description : "As an action I can generate an aura of darkness. For 1 minute, the area within 30 feet of me is heavily obscured. A creature with darkvision can’t see through this darkness, and nonmagical light can’t illuminate it. Me and up to four creatures that I designate can see normally in the darkness.\n   Creatures of evil alignment inside the darkened area have disadvantage on Wis and Cha saves.\n   Once I use this feature, I can’t use it again until I finish a long rest.",
+			description : "As an action I can generate an aura of darkness. For 1 min, the area w/in 30 ft of me is obscured. A crea w/ darkvision can’t see through this, \u0026 nonmagical light can’t illuminate it. Me \u0026 up to four crea that I designate can see normally.\n   Crea of evil alignment in range have disadv on Wis \u0026 Cha saves.\n   Once I use this feature, I can’t use it again until I finish a long rest.",
 			limfeaname : "Absolution in Darkness",
 			usages : 1,
 			recovery : "long rest",
@@ -76,8 +76,11 @@ AddSubClass("paladin", "oath of the raven", {
 			name : "Wings",
 			source : ["OGC", 1],
 			minlevel : 20,
-			description : "As a bonus action, I can make black wings sprout from my back, w/ no hindrance from my equipment. I gain a flying speed equal to my walking speed. The wings remain for an hour or until dismissed w/ a bonus action.\n   I can use this feature even if I am wearing armor: though tangible and raven-like, these wings are magical.\n   Once I use this feature, I can’t use it again until I finish a short or long rest.",
-			action : ["bonus action", " (1 hr)"],
+			description : "As a bonus action, I can make black, magical, raven like wings sprout from my back, w/ no hindrance from my equip. I gain a flying speed equal to my walking speed. The wings remain for an hour or until dismissed w/ a bonus action.\n   Once I use this feature, I can’t use it again until I finish a short/long rest.",
+			action : [
+				["bonus action", " (activate)"],
+				["bonus action", " (deactivate)"]
+			],
 			limfeaname : "Wings",
 			usages : 1,
 			recovery : "short rest",
