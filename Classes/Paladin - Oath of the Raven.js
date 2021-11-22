@@ -10,7 +10,7 @@
 	Effect:     Add the subclass Oath of the Raven
 	Content:	
 	Code by:	rayvenwilk
-	Date:		2021-11-18 (sheet 13.0.8)
+	Date:		2021-11-22 (sheet 13.0.8)
 */
 
 var iFileName = "Paladin - Oath of the Raven[transcribed by rayvenwilk].js";
@@ -23,7 +23,7 @@ SourceList["OGC"] = {
 };
 
 AddSubClass("paladin", "oath of the raven", {
-	regExpSearch : /^((?=.*(\braven\b)((?=.*paladin)|((?=.*(exalted|sacred|holy|divine))(?=.*(knight|fighter|warrior|warlord|trooper)))))).*$/i,
+	regExpSearch : /^(((?=.*(raven|bird|flight|nature|fey))((?=.*paladin)|((?=.*(exalted|sacred|holy|divine))(?=.*(knight|fighter|warrior|warlord|trooper)))))|((?=.*dark)(?=.*knight))|(?=.*avenger)).*$/i,
 	subname : "Oath of the Raven",
 	source : ["OGC", 1],
 	features : {
