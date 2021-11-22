@@ -32,6 +32,17 @@ AddSubClass("paladin", "oath of the raven", {
 			source : ["OGC", 1],
 			minlevel : 3,
 			description : "\n   As a bonus action, I make my opponents forget about me until the end of my turn. I am considered to be hidden (see the Combat chapter).\n   Creatures who can see the invisible can make a Wis save to resist this effect.",
+			
+			additional : "also see notes page",
+			toNotesPage : [{
+				name : "Furtive Aura", // feature name or whatever you want
+				source : ["OGC"],
+				popupName : "Furtive Aura Features", // feature name or whatever you want
+				page3notes : true,
+				note : desc([
+					"paragraph 1", 
+					"paragraph 2", // this will start at the beginning of the next line
+				
 			action : ["bonus action", ""],
 			spellcastingExtra : ["bane", "disguise self", "darvision", "branding smite", "haste", "nondetection", "confusion", "hallucinatory terrain", "commune", "teleportation circle"],
 		},
