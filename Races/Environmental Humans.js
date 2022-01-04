@@ -1,0 +1,161 @@
+var iFileName = "Homebrew Syntax - Environmental Humans.js"; 
+RequiredSheetVersion(13); 
+
+ // This adds Environmental Humans' 6 Subraces by AeronDrake (Created by CLL, BrokenJobber13)
+// https://drive.google.com/file/d/0B4jAv0Wgv9taOEpaWnBwWjlSWms/view
+
+RaceList["desertborn human"] = { 
+	regExpSearch : /^(?=.*desertborn)(?=.*human).*$/i, 
+	name : "Desertborn Human", 
+	sortname : "Desertborn Human", 
+	source : ["HB", 0], 
+	plural : "Desertborns", 
+	size : 3, 
+	speed : { 
+		walk : { spd : 30, enc : 20 }, 	},
+	languageProfs : ["Common", 1], 
+	savetxt : { 
+		adv_vs : ["saves for extreme heat"], 	},
+	weaponprofs : [false, false, ["scimitars", "whip", "shortbow"]], 
+	armor : [true, false, false, true], 
+	skills : ["Athletics", "Survival"], 
+	age : " reach adulthood in their late teens and live around 100 years", 
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", 
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", 
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
+	improvements : "Desertborn Human: +1 Free Choice, +2 Dexerity;", 
+	scores : [0, 2, 0, 0, 0, 0], 
+	trait : "Desertborn Human (+1 Free Choice, +2 Dexterity)\nBorn in the Desert\nIn addition, once per long rest when you would gain a level of exhaustion, you can choose to not gain a level of exhaustion.\nDune Warrior\nWhen you score a critical hit with any scimitar/whip/shortbow, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
+},
+  
+RaceList["Forestborn human"] = {
+
+	regExpSearch : /^(?=.*forestborn)(?=.*human).*$/i, 
+	name : "Forestborn Human", 
+	sortname : "Forestborn Human", 
+	source : ["HB", 0],
+	plural : "Forestborns", 
+	size : 3, 
+	speed : { walk : { spd : 35, enc : 20 } },
+	toolProfs : ["Herbalism Kit"],
+	languageProfs : ["Common", "From Human"], 
+	savetxt : { adv_vs : ["poisons", "diease"], },
+	skills : ["Nature"],
+	skillstxt : "Choose any two skills", 
+	age : " reach adulthood in their late teens and live around 100 years", 
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")",
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", 
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
+	improvements : "Forestborn Human: +1 Free Choice, +2 Wisdom;", 
+	scores : [0, 0, 0, 0, 2, 0], 
+	trait : "Forestborn Human (+1 Free Choice, +2 Wisdom)\nNatural Resistances\nYou have advantage on saving throws against poisons and diseases.\nWatchers of the Forests\nWhenever you make a Wisdom(Perception) checks while in a forest, you are considered proficient in the Perception skill and add double your proficiency bonus to the check, instead your normal proficiency bonus.",
+},
+  
+  RaceList["mountainborn human"] = { 
+	regExpSearch : /^(?=.*mountainborn)(?=.*human).*$/i, 
+
+	name : "Mountainborn Human", 
+	source : ["HB", 0], 
+	plural : "Mountainborn Human", 
+	size : 3, 
+	speed : { walk : { spd : 30, enc : 20 }, },
+	toolProfs : ["Smith's or Mason's tools", 1], 
+	languageProfs : ["Common", 1], 
+	savetxt : { 
+		text : ["I can ignore difficult Rocky terrain", "double Prof for Str checks."], 	},
+	weaponprofs : [false, false, ["light hammer", "warhammer"]], 
+	armor : [false, false, false, false], 
+	skillstxt : "Choose any two skills",  
+	age : " reach adulthood in their late teens and live around 100 years", 
+	height : " range from 5 to over 8 feet tall (4'9\" + 3d8\")", 
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
+	improvements : "Mountainborn Human: +1 Free Choice, +2 Strength;", 
+	scores : [2, 0, 0, 0, 0, 0], 
+	trait : "Mountainborn Human (+1 Free Choice, +2 Strength)\nMountaineer\nWhenever you make a Strength(Athletics) check to climb rocks, you are considered proficient in the Athletics skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.\nStrong as a Rock\nYour hit point maximum increases by 1 and by 1 every time you gain a level.",
+	carryingCapacity : 2,
+	calcChanges : {	hp : function (totalHD) { return [totalHD, "Mountaineer"]; },
+},
+},
+  
+  RaceList["plainsborn human"] = {
+
+	regExpSearch : /^(?=.*plainsborn)(?=.*human).*$/i, 
+	name : "Plainsborn Human", 
+	sortname : "Plainsborn Human", 
+	source : ["HB", 0],
+	plural : "Plainborns", 
+	size : 3, 
+	speed : { walk : { spd : 30, enc : 20 } },
+	toolProfs : ["Artisan's tools"],
+	languageProfs : ["Common", "From Human"], 
+	skillstxt : "Choose any two skills", 
+	age : " reach adulthood in their late teens and live around 100 years", 
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")",
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", 
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
+	improvements : "Plainsborn Human: +1 Charisma, +2 Intelligence;", 
+	scores : [0, 0, 0, 2, 0, 1], 
+	trait : "Plansborn Human (+1 Free Choice, +2 Intelligence)\nVersatile Culture.\nYou gain proficiency in two skills of your choice.\nCrafting  Expertise.\nYou gain proficiency in one artisan's tools of your choice. When you craft an object using the artisan's tools you're proficient with, you count as two characters working for the amount of gp worth of effort for every day spent creating the item, allowing you to craft objects faster than others.", //required; the racial trait as it will be put in the Racial Trait field on the second page (note that "\n" is a line break).
+
+},
+  
+  RaceList["seaborn human"] = { 
+	regExpSearch : /^(?=.*seaborn)(?=.*human).*$/i, 
+	name : "Seaborn Human", 
+	sortname : "Seaborn Human", 
+	source : ["HB", 0], 
+	plural : "Seaborns", 
+	size : 3, 
+	speed : { 
+		walk : { spd : 30, enc : 20 }, 
+		swim : { spd : 30, enc : 20 },
+	},
+	toolProfs : ["Vehicles Water"],
+	languageProfs : ["Common", 1],
+	savetxt : { 
+		adv_vs : ["negotiating"], 	},
+	skills : ["Persuasion", "Deception"], 
+	age : " reach adulthood in their late teens and live around 100 years", 
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", 
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", 
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
+	improvements : "Seaborn Human: +1 Free Choice, +2 Charisma;", 
+	scores : [0, 0, 0, 0, 0, 2], 
+	trait : "Seaborn Human (+1 Free Choice, +2 Charisma)\nAppraiser\nYou have advantage on checks to determine the value and craftwork of items.\nNatural Trader\nyou have advantage on Charisma (Persuasion) checks when negotiating prices with others that aren't hostile toward you.", 
+},
+  
+  RaceList["winterborn human"] = { 
+	regExpSearch : /^(?=.*winterborn)(?=.*human).*$/i, 
+	name : "Winterborn Human", 
+	sortname : "Winterborn Human", 
+	source : ["HB", 0], 
+	plural : "Winterborn Human", 
+	size : 3, 
+	speed : { walk : { spd : 30, enc : 20 }, 	},
+	languageProfs : ["Common", 1], 
+	savetxt : { adv_vs : ["extreme cold", "frightened"], 	},
+	weaponprofs : [false, false, ["battleaxe", "longsword", "great axes", "greatswords"]], 
+	skills : ["Survival"], 
+	age : " reach adulthood in their late teens and live around 100 years", 
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")", 
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)", 
+	heightMetric : " range from 1,5 to over 1,8 metres tall (145 + 5d8 cm)", 
+	weightMetric : " weigh around 70 kg (50 + 5d8 \xD7 4d4 / 10 kg)", 
+	improvements : "Winterborn Human: +1 Free Choice, +2 Constitution;", 
+	scores : [0, 0, 2, 0, 0, 0], 
+  trait : "Winterborn Human (+1 Free Choice, +2 Constitution)\nGlory over Death: If I am reduced to 0 hit points but not killed outright, I can drop to 1 hit point instead. I can't use this feature again after a long rest.\nWinter Fortitude: I have advantage on saving throws against extreme cold.",
+	features : { 
+		"glory over death" : { 
+			name : "Glory over Death", 
+			minlevel : 1, 
+			usages : 1, 
+			recovery : "long rest", 
+			action : ["action", ""], 
+			},
+  },
+};
+  
