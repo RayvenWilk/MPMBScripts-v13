@@ -154,20 +154,6 @@ SpellsList["lightning blast"] = {
 	description : "3d6+1d6/SL Lightning dmg; save halves",
 	descriptionFull : "Streams of lightning burst forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 lightning damage on a failed save, or half as much damage on a successful one." + AtHigherLevels + "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
 },
-SpellsList["sense emotion"] = {
-	name : "Sense Emotion",
-	classes : [],
-	source : ["SD:WotJ", 5],
-	ritual : false,
-	level : 1,
-	school : "Div",
-	time : "1 a",
-	range : "Self",
-	components : "S",
-	duration : "Con, 10 min",
-	description : "You sense the emotions of 1 crea w/in 30 ft",
-	descriptionFull : "You attune your senses to pick up the emotions of others for the duration. When you cast the spell, and as your action on each turn until the spell ends, you can focus your senses on one humanoid you can see within 30 feet of you. You instantly learn the target's prevailing emotion, whether it's love, anger, pain, fear, calm, or something else. If the target isn't actually humanoid or it is immune to being charmed, you sense that it is calm."
-},
 SpellsList["saber throw"] = {
 	name : "Saber Throw",
 	classes : [],
