@@ -10,12 +10,10 @@
 	Effect:     This will add the subclass Path of the Titan as an option for the barbarian
 	Content:	Barbarian subclass Path of the Titan found : https://www.gmbinder.com/share/-Mf0UvCijZcQ9U6n657W
 	Code by:	rayvenwilk
-	Date:		2021-10-18 (sheet 13.0.6)
+	Date:		2021-10-18 (sheet 13.0.8)
 */
 
 var iFileName = "Barbarian_PathoftheTitan(transcribed_by_rayvenwilk).js";
-
-//need help with calc for HP, feature 3
 
 AddSubClass("barbarian", "path of the titan", {
     regExpSearch : /^(?=.*titan).*$/i,
@@ -29,12 +27,11 @@ AddSubClass("barbarian", "path of the titan", {
             minlevel : 3,
             description : "\n   " + "I grow 3d4 inches in height and gain that same amount x8 in weight. I also learn to speak, read, and write Giant. And my HP max increases by 3 (+1 each level after 3rd).",
             languageProfs : ["Giant"],
-            /*calcChanges : {
-                hp : function (totalHD) {
-                    return [totalHD + 3, '\n + ' + totalHD + '\xD7 3 from Child of Titans feat (' + (totalHD + 3) + ')', true];
+            calcChanges : {
+                hp : function ( totalHD ) {
+			return [totalHD + 3, '\n + ' + totalHD + ' + 3 from the Child of the Titans feature (' + (totalHD * 1) + ')', true];
                 }
-                setAltHP : true,
-            }*/
+            }
         },
         "subclassfeature3.1" : {
             name : "Rage of the Colossus",
