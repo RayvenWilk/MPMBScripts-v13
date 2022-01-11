@@ -9,10 +9,10 @@
 	Subject:    
 	Effect:     
 	Content:	
-	Code by:	rayvenwilk
-	Date:		2022-01-11 (sheet 13.0.8)
+	Code by:	updated to vs 13 by rayvenwilk
+	Date:		2022-01-11 (sheet 13.0.9)
 */
-var iFileName = "Cleric Zeal Domain[transcribed by rayvenwilk].js";
+var iFileName = "Cleric Zeal Domain.js";
 
 SourceList["PS:A"] = {
 	name: "Plane Shift: Amonkhet", // 2017-07-05
