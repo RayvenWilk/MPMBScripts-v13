@@ -10,7 +10,7 @@
 	Effect:     
 	Content:	
 	Code by:	rayvenwilk
-	Date:		2021-11-18 (sheet 13.0.8)
+	Date:		2021-12-29 (sheet 13.0.9)
 */
 
 var iFileName = "Kibbles' Crafting Guide[transcribed by rayvenwilk].js";
