@@ -1,3 +1,6 @@
+//Created by Kocis777
+
+
 var iFileName = "Wicked Siren.js";
 
 RequiredSheetVersion("13.1.0");
